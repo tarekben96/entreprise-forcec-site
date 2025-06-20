@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entreprise Force C inc. | Services d'entretien extérieur au Québec</title>
+    <meta name="description" content="Force C inc. - Déneigement, tonte de pelouse, entretien paysager à Sainte-Monique et régions limitrophes. Service rapide, fiable et personnalisé toute l'année.">
+    <meta property="og:title" content="Entreprise Force C inc. | Services d'entretien extérieur au Québec">
+    <meta property="og:description" content="Déneigement, tonte de pelouse et entretien paysager. Service professionnel à Sainte-Monique et environs.">
+    <meta property="og:image" content="images/background.jpg">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="lang-script" src="lang/lang.fr.js"></script>
+    <script src="lang/lang-switcher.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1a4d7c',
+                        'primary-dark': '#0d3b68',
+                        'secondary': '#4caf50',
+                        'secondary-dark': '#3d8b40',
+                        'accent': '#e0f2f1',
+                        'light': '#f8f9fa',
+                        'dark': '#343a40'
+                    },
+                    fontFamily: {
+                        'sans': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 bg-light dark:bg-dark dark:text-white">
+    <!-- Accessibility: Skip to main -->
+    <a href="#maincontent" class="skip-link absolute left-2 top-2 bg-secondary text-white px-4 py-2 z-50 rounded transition focus:translate-y-0 -translate-y-16 focus:outline-none">Aller au contenu principal</a>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50 transition-all duration-300 dark:bg-dark dark:text-white" id="navbar">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-primary font-bold text-2xl dark:text-secondary">
+                    <span class="text-secondary">Force</span> C
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">À propos</a>
+                <a href="#gallery" class="nav-link">Galerie</a>
+                <a href="#testimonials" class="nav-link">Témoignages</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="flex items-center gap-2">
+                <button id="darkToggle" class="bg-gray-200 dark:bg-gray-700 rounded-full p-2 mr-1" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <button id="langToggle" class="bg-secondary text-white px-2 py-1 rounded text-xs font-bold" aria-label="Switch Language">EN</button>
+                <a href="#quote" class="hidden md:inline-block bg-secondary hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                    Demander un devis
+                </a>
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700 dark:text-white focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden bg-white dark:bg-dark hidden pb-4">
+            <div class="container mx-auto px-4 flex flex-col space-y-3">
+                <a href="#services" class="nav-link py-2">Services</a>
+                <a href="#about" class="nav-link py-2">À propos</a>
+                <a href="#gallery" class="nav-link py-2">Galerie</a>
+                <a href="#testimonials" class="nav-link py-2">Témoignages</a>
+                <a href="#blog" class="nav-link py-2">Blog</a>
+                <a href="#faq" class="nav-link py-2">FAQ</a>
+                <a href="#contact" class="nav-link py-2">Contact</a>
+                <a href="#quote" class="bg-secondary hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg text-center transition-colors">
+                    Demander un devis
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header class="pt-24 md:pt-0 relative" id="hero">
+        <div id="snowContainer" class="absolute inset-0 pointer-events-none hidden"></div>
+        <div class="hero-winter min-h-screen flex items-center">
+            <div id="maincontent" class="container mx-auto px-4 py-16 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                    <span class="trans-fr">Services d'entretien extérieur <br><span class="text-secondary">professionnels</span> au Québec</span>
+                    <span class="trans-en hidden">Professional Outdoor Maintenance <br><span class="text-secondary">Services</span> in Quebec</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-white mb-10 max-w-3xl mx-auto">
+                    <span class="trans-fr">Déneigement, tonte de pelouse et entretien paysager à Sainte-Monique et ses environs</span>
+                    <span class="trans-en hidden">Snow removal, lawn mowing, and landscaping in Sainte-Monique and surrounding areas</span>
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="#quote" class="bg-secondary hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg trans-fr">
+                        Demander un devis
+                    </a>
+                    <a href="#quote" class="bg-secondary hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg trans-en hidden">
+                        Request a Quote
+                    </a>
+                    <a href="#services" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-lg transition-colors text-lg trans-fr">
+                        Nos services
+                    </a>
+                    <a href="#services" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-lg transition-colors text-lg trans-en hidden">
+                        Our Services
+                    </a>
+                </div>
+                <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white scroll-indicator">
+                    <i class="fas fa-chevron-down text-3xl"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Promotion Banner -->
+    <div class="bg-primary-dark text-white py-3 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center mb-3 md:mb-0">
+                    <div class="bg-yellow-500 rounded-full p-2 mr-3">
+                        <i class="fas fa-bolt text-white"></i>
+                    </div>
+                    <p class="font-medium">Offre spéciale : <span class="font-bold">15% de réduction</span> sur les contrats annuels jusqu'au 30 novembre</p>
+                </div>
+                <a href="#quote" class="bg-white text-primary hover:bg-gray-100 px-4 py-1 rounded-full font-medium transition-colors">
+                    En profiter maintenant
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Nos services saisonniers</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Des solutions adaptées à chaque saison pour l'entretien de votre propriété
+                </p>
+            </div>
+            <!-- Season Tabs -->
+            <div class="season-tabs flex justify-center mb-12">
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <input type="radio" name="season" id="winter" class="sr-only" checked>
+                    <label for="winter" class="winter-tab cursor-pointer px-6 py-3 text-lg font-medium border-b-4 border-transparent text-primary hover:text-primary hover:border-primary transition-colors">
+                        <i class="fas fa-snowflake mr-2"></i> Services d'hiver
+                    </label>
+                    <input type="radio" name="season" id="summer" class="sr-only">
+                    <label for="summer" class="summer-tab cursor-pointer px-6 py-3 text-lg font-medium border-b-4 border-transparent text-secondary hover:text-secondary hover:border-secondary transition-colors">
+                        <i class="fas fa-sun mr-2"></i> Services d'été
+                    </label>
+                </div>
+            </div>
+            <!-- Winter Services -->
+            <div id="winterServices" class="season-content active">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="h-48 bg-primary flex items-center justify-center">
+                            <i class="fas fa-snowplow text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary mb-3">Déneigement résidentiel</h3>
+                            <p class="text-gray-600 mb-4">
+                                Dégagement complet des entrées, allées et trottoirs pour assurer votre sécurité pendant l'hiver.
+                            </p>
+                            <a href="#quote" class="text-primary font-medium hover:underline inline-flex items-center">
+                                Demander un devis <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="h-48 bg-primary flex items-center justify-center">
+                            <i class="fas fa-building text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary mb-3">Déneigement commercial</h3>
+                            <p class="text-gray-600 mb-4">
+                                Solutions adaptées aux entreprises pour maintenir vos espaces accessibles et sécuritaires.
+                            </p>
+                            <a href="#quote" class="text-primary font-medium hover:underline inline-flex items-center">
+                                Demander un devis <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="h-48 bg-primary flex items-center justify-center">
+                            <i class="fas fa-icicles text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary mb-3">Déglaçage et épandage</h3>
+                            <p class="text-gray-600 mb-4">
+                                Traitement préventif et curatif contre la glace pour éviter les accidents.
+                            </p>
+                            <a href="#quote" class="text-primary font-medium hover:underline inline-flex items-center">
+                                Demander un devis <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Summer Services -->
+            <div id="summerServices" class="season-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="h-48 bg-secondary flex items-center justify-center">
+                            <i class="fas fa-cut text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-secondary mb-3">Tonte de pelouse</h3>
+                            <p class="text-gray-600 mb-4">
+                                Entretien régulier pour garder votre pelouse en parfait état tout au long de la saison.
+                            </p>
+                            <a href="#quote" class="text-secondary font-medium hover:underline inline-flex items-center">
+                                Demander un devis <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="h-48 bg-secondary flex items-center justify-center">
+                            <i class="fas fa-leaf text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-secondary mb-3">Entretien paysager</h3>
+                            <p class="text-gray-600 mb-4">
+                                Désherbage, taille de haies et entretien complet de vos espaces verts.
+                            </p>
+                            <a href="#quote" class="text-secondary font-medium hover:underline inline-flex items-center">
+                                Demander un devis <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="h-48 bg-secondary flex items-center justify-center">
+                            <i class="fas fa-broom text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-secondary mb-3">Nettoyage saisonnier</h3>
+                            <p class="text-gray-600 mb-4">
+                                Nettoyage complet de votre terrain au printemps et à l'automne.
+                            </p>
+                            <a href="#quote" class="text-secondary font-medium hover:underline inline-flex items-center">
+                                Demander un devis <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Service Packages -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-center text-primary mb-8">Nos forfaits</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Basic Package -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 transition-transform hover:transform hover:scale-105">
+                        <div class="bg-gray-100 p-6 text-center">
+                            <h4 class="text-xl font-bold text-primary">Forfait Essentiel</h4>
+                            <div class="text-3xl font-bold text-gray-800 my-4">
+                                <span>À partir de</span>
+                                <div class="text-4xl">299$</div>
+                                <span class="text-sm text-gray-600">par saison</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-3">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-secondary mr-3"></i>
+                                    <span>Déneigement standard</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-secondary mr-3"></i>
+                                    <span>Tonte de pelouse bi-mensuelle</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-secondary mr-3"></i>
+                                    <span>Nettoyage de printemps</span>
+                                </li>
+                                <li class="flex items-center text-gray-400">
+                                    <i class="fas fa-times mr-3"></i>
+                                    <span>Entretien paysager</span>
+                                </li>
+                                <li class="flex items-center text-gray-400">
+                                    <i class="fas fa-times mr-3"></i>
+                                    <span>Service prioritaire</span>
+                                </li>
+                            </ul>
+                            <div class="mt-6">
+                                <a href="#quote" class="block w-full bg-primary hover:bg-primary-dark text-white text-center py-3 rounded-lg transition-colors">
+                                    Choisir ce forfait
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Premium Package -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden border-2 border-secondary transform scale-105 z-10">
+                        <div class="bg-secondary p-6 text-center">
+                            <div class="inline-block bg-white text-secondary px-3 py-1 rounded-full text-sm font-bold mb-2">
+                                POPULAIRE
+                            </div>
+                            <h4 class="text-xl font-bold text-white">Forfait Premium</h4>
+                            <div class="text-3xl font-bold text-white my-4">
+                                <span>À partir de</span>
+                                <div class="text-4xl">499$</div>
+                                <span class="text-sm text-gray-100">par saison</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-3">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-secondary mr-3"></i>
+                                    <span>Déneigement prioritaire</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-secondary mr-3"></i>
+                                    <span>Tonte de pelouse hebdomadaire</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-secondary mr-3"></i>
+                                    <span>Nettoyage printemps/automne</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-secondary mr-3"></i>
+                                    <span>Entretien paysager de base</span>
+                                </li>
+                                <li class="flex items-center text-gray-400">
+                                    <i class="fas fa-times mr-3"></i>
+                                    <span>Service d'urgence 24/7</span>
+                                </li>
+                            </ul>
+                            <div class="mt-6">
+                                <a href="#quote" class="block w-full bg-secondary hover:bg-secondary-dark text-white text-center py-3 rounded-lg transition-colors">
+                                    Choisir ce forfait
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Ultimate Package -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 transition-transform hover:transform hover:scale-105">
+                        <div class="bg-gray-100 p-6 text-center">
+                            <h4 class="text-xl font-bold text-primary">Forfait Ultime</h4>
+                            <div class="text-3xl font-bold text-gray-800 my-4">
+                                <span>À partir de</span>
+                                <div class="text-4xl">799$</div>
+                                <span class="text-sm text-gray-600">par saison</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-3">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-secondary mr-3"></i>
+                                    <span>Déneigement prioritaire</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-secondary mr-3"></i>
+                                    <span>Tonte de pelouse hebdomadaire</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-secondary mr-3"></i>
+                                    <span>Nettoyage complet 4 saisons</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-secondary mr-3"></i>
+                                    <span>Entretien paysager complet</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-secondary mr-3"></i>
+                                    <span>Service d'urgence 24/7</span>
+                                </li>
+                            </ul>
+                            <div class="mt-6">
+                                <a href="#quote" class="block w-full bg-primary hover:bg-primary-dark text-white text-center py-3 rounded-lg transition-colors">
+                                    Choisir ce forfait
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-accent">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <div class="bg-primary rounded-lg p-8 md:p-12 shadow-xl">
+                            <div class="text-white mb-8">
+                                <h2 class="text-3xl md:text-4xl font-bold mb-6">À propos de nous</h2>
+                                <p class="text-lg mb-4">
+                                    Entreprise Force C inc., fondée en 2019, est spécialisée dans les services d'entretien extérieur à Sainte-Monique et ses environs.
+                                </p>
+                                <p class="text-lg mb-4">
+                                    Nous assurons des prestations rapides, fiables et adaptées aux saisons québécoises. Notre équipe professionnelle s'engage à offrir un service courtois, sécuritaire et personnalisé à chaque client.
+                                </p>
+                            </div>
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <div class="flex items-center">
+                                    <div class="bg-white rounded-full p-3 mr-4">
+                                        <i class="fas fa-check text-primary text-xl"></i>
+                                    </div>
+                                    <span class="text-white font-medium">Service rapide</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="bg-white rounded-full p-3 mr-4">
+                                        <i class="fas fa-check text-primary text-xl"></i>
+                                    </div>
+                                    <span class="text-white font-medium">Fiabilité garantie</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="bg-white rounded-full p-3 mr-4">
+                                        <i class="fas fa-check text-primary text-xl"></i>
+                                    </div>
+                                    <span class="text-white font-medium">Service personnalisé</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-secondary rounded-full w-24 h-24 flex items-center justify-center shadow-lg hidden md:flex">
+                            <span class="text-white font-bold">Depuis 2019</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-primary mb-6">Zones desservies</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="flex items-start">
+                                <div class="bg-accent rounded-full p-3 mr-4">
+                                    <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Sainte-Monique</h4>
+                                    <p class="text-gray-600">Zone principale</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-accent rounded-full p-3 mr-4">
+                                    <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Bécancour</h4>
+                                    <p class="text-gray-600">Service complet</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-accent rounded-full p-3 mr-4">
+                                    <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Nicolet</h4>
+                                    <p class="text-gray-600">Service complet</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-accent rounded-full p-3 mr-4">
+                                    <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Drummondville</h4>
+                                    <p class="text-gray-600">Sur demande</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Certifications -->
+                        <div class="mt-8 border-t pt-6">
+                            <h4 class="font-bold text-lg mb-4">Nos certifications et affiliations</h4>
+                            <div class="flex flex-wrap gap-4 justify-center">
+                                <div class="bg-gray-100 p-3 rounded-lg flex items-center justify-center w-24 h-24">
+                                    <div class="text-center">
+                                        <i class="fas fa-award text-primary text-3xl mb-1"></i>
+                                        <div class="text-xs font-medium">Certifié Pro</div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-100 p-3 rounded-lg flex items-center justify-center w-24 h-24">
+                                    <div class="text-center">
+                                        <i class="fas fa-shield-alt text-primary text-3xl mb-1"></i>
+                                        <div class="text-xs font-medium">Assuré</div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-100 p-3 rounded-lg flex items-center justify-center w-24 h-24">
+                                    <div class="text-center">
+                                        <i class="fas fa-leaf text-secondary text-3xl mb-1"></i>
+                                        <div class="text-xs font-medium">Éco-responsable</div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-100 p-3 rounded-lg flex items-center justify-center w-24 h-24">
+                                    <div class="text-center">
+                                        <i class="fas fa-handshake text-primary text-3xl mb-1"></i>
+                                        <div class="text-xs font-medium">APCHQ</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 text-center">
+                            <a href="#contact" class="inline-block bg-primary hover:bg-blue-800 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                                Contactez-nous
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Section -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold text-center text-primary mb-8">Notre équipe</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Team Member 1 -->
+<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+    <div class="h-48 bg-gray-200 flex items-center justify-center">
+        <img src="images/shantal.jpg" alt="Shantal Cloutier" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg" />
+    </div>
+    <div class="p-6 text-center">
+        <h4 class="text-xl font-bold text-primary">Shantal Cloutier</h4>
+        <p class="text-gray-600 mb-3">Fondateur & Directeur</p>
+        <p class="text-gray-700 text-sm">
+        Plus de 5 ans d’expérience en gestion d’entreprise, cumulée à une expertise concrète dans l’entretien extérieur, le déneigement résidentiel et la coordination de petites équipes sur le terrain.
+        </p>
+    </div>
+</div>
+<!-- Team Member 2 -->
+<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+    <div class="h-48 bg-gray-200 flex items-center justify-center">
+        <img src="images/Dany.jpeg" alt="Dany Camirand" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg" />
+    </div>
+    <div class="p-6 text-center">
+        <h4 class="text-xl font-bold text-primary">Dany Camirand</h4>
+        <p class="text-gray-600 mb-3">Co-fondateur & Directeur des opérations</p>
+        <p class="text-gray-700 text-sm">
+        Responsable de la supervision terrain, de la logistique quotidienne et de la coordination des équipes d’entretien extérieur et de déneigement.
+        </p>
+    </div>
+</div>
+<!-- Team Member 3 -->
+<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+    <div class="h-48 bg-gray-200 flex items-center justify-center">
+        <img src="images/Arielle.jpg" alt="Arielle Cloutier" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg" />
+    </div>
+    <div class="p-6 text-center">
+        <h4 class="text-xl font-bold text-primary">Arielle Cloutier</h4>
+        <p class="text-gray-600 mb-3">Employée – Entretien résidentiel & soutien aux opérations</p>
+        <p class="text-gray-700 text-sm">
+            Membre de l’équipe terrain, elle participe aux travaux d’entretien saisonnier, de tonte de pelouse, de déneigement et appuie les opérations logistiques au quotidien.
+        </p>
+    </div>
+</div>
+<!-- Team Member 4 -->
+<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+    <div class="h-48 bg-gray-200 flex items-center justify-center">
+        <img src="images/Tarek.jpg" alt="Tarek Benkhedim" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg" />
+    </div>
+    <div class="p-6 text-center">
+        <h4 class="text-xl font-bold text-primary">Tarek Benkhedim</h4>
+        <p class="text-gray-600 mb-3">Technicien en informatique & Responsable du soutien numérique</p>
+        <p class="text-gray-700 text-sm">
+            Spécialisé dans le soutien technique, la gestion de bases de données et les outils numériques de l’entreprise. Il contribue à l’optimisation des systèmes informatiques internes, à la gestion des communications en ligne, ainsi qu’à la création de contenus visuels et administratifs.
+        </p>
+    </div>
+</div>  
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Notre galerie</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Découvrez nos réalisations en images
+                </p>
+            </div>
+            <!-- Gallery Tabs -->
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <button type="button" class="gallery-tab px-6 py-3 text-lg font-medium border-b-4 border-primary text-primary transition-colors active" data-tab="all">
+                        Tous
+                    </button>
+                    <button type="button" class="gallery-tab px-6 py-3 text-lg font-medium border-b-4 border-transparent text-gray-600 hover:text-primary hover:border-primary transition-colors" data-tab="winter">
+                        Hiver
+                    </button>
+                    <button type="button" class="gallery-tab px-6 py-3 text-lg font-medium border-b-4 border-transparent text-gray-600 hover:text-secondary hover:border-secondary transition-colors" data-tab="summer">
+                        Été
+                    </button>
+                </div>
+            </div>
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Winter Image 1 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg cursor-pointer h-64 relative winter-img">
+                    <div class="absolute inset-0 bg-primary flex items-center justify-center">
+                        <img src="images/Winter1.jpg" alt="Déneigement commercial - Bécancour, 2023" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                            <div class="text-white text-center p-4">
+                                <h3 class="font-bold text-xl">Déneigement résidentiel</h3>
+                                <p>Sainte-Monique, 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Winter Image 2 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg cursor-pointer h-64 relative winter-img">
+                    <div class="absolute inset-0 bg-blue-800 flex items-center justify-center">
+                        <img src="images/Winter2.jpg" alt="Déneigement commercial - Bécancour, 2023" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                            <div class="text-white text-center p-4">
+                                <h3 class="font-bold text-xl">Déneigement commercial</h3>
+                                <p>Bécancour, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Winter Image 3 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg cursor-pointer h-64 relative winter-img">
+                    <div class="absolute inset-0 bg-blue-700 flex items-center justify-center">
+                        <img src="images/Winter3.jpg" alt="Déneigement commercial - Bécancour, 2023" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                            <div class="text-white text-center p-4">
+                                <h3 class="font-bold text-xl">Déglaçage d'entrée</h3>
+                                <p>Nicolet, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Summer Image 1 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg cursor-pointer h-64 relative summer-img">
+                    <div class="absolute inset-0 bg-green-600 flex items-center justify-center">
+                        <img src="images/Summer1.jpg" alt="Déneigement commercial - Bécancour, 2023" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                            <div class="text-white text-center p-4">
+                                <h3 class="font-bold text-xl">Tonte de pelouse</h3>
+                                <p>Sainte-Monique, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Summer Image 2 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg cursor-pointer h-64 relative summer-img">
+                    <div class="absolute inset-0 bg-green-700 flex items-center justify-center">
+                        <img src="images/Summer2.jpg" alt="Déneigement commercial - Bécancour, 2023" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                            <div class="text-white text-center p-4">
+                                <h3 class="font-bold text-xl">Taille de haies</h3>
+                                <p>Bécancour, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Summer Image 3 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg cursor-pointer h-64 relative summer-img">
+                    <div class="absolute inset-0 bg-green-500 flex items-center justify-center">
+                        <img src="images/Summer3.jpg" alt="Déneigement commercial - Bécancour, 2023" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                            <div class="text-white text-center p-4">
+                                <h3 class="font-bold text-xl">Aménagement paysager</h3>
+                                <p>Nicolet, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-accent">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Ce que nos clients disent</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Découvrez les témoignages de nos clients satisfaits
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white rounded-xl shadow-lg p-8 border-t-4 border-primary">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Service rapide et impeccable, même lors des tempêtes. Merci Force C!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="bg-primary rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-xl mr-4">
+                            C
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Client résidentiel</h4>
+                            <p class="text-gray-600">Bécancour</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white rounded-xl shadow-lg p-8 border-t-4 border-secondary">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Mon allée est toujours dégagée à temps, je recommande à 100%."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="bg-secondary rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-xl mr-4">
+                            D
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Mme D.</h4>
+                            <p class="text-gray-600">Sainte-Monique</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white rounded-xl shadow-lg p-8 border-t-4 border-primary">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Équipe professionnelle et courtoise. La pelouse est toujours parfaitement entretenue."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="bg-primary rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-xl mr-4">
+                            M
+                        </div>
+                        <div>
+                            <h4 class="font-bold">M. Tremblay</h4>
+                            <p class="text-gray-600">Nicolet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Testimonial -->
+            <div class="mt-12 text-center">
+                <button id="addTestimonialBtn" class="bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors inline-flex items-center">
+                    <i class="fas fa-plus mr-2"></i> Ajouter votre témoignage
+                </button>
+            </div>
+            <!-- Testimonial Form Modal -->
+            <div id="testimonialModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                <div class="bg-white rounded-xl shadow-2xl p-8 max-w-md w-full mx-4">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-2xl font-bold text-primary">Partagez votre expérience</h3>
+                        <button id="closeTestimonialModal" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <form id="testimonialForm" class="space-y-4">
+                        <div>
+                            <label for="testimonialName" class="block text-gray-700 font-medium mb-2">Votre nom</label>
+                            <input type="text" id="testimonialName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                        <div>
+                            <label for="testimonialLocation" class="block text-gray-700 font-medium mb-2">Ville</label>
+                            <input type="text" id="testimonialLocation" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Note</label>
+                            <div class="flex text-gray-400 text-2xl">
+                                <i class="fas fa-star cursor-pointer rating-star" data-rating="1"></i>
+                                <i class="fas fa-star cursor-pointer rating-star" data-rating="2"></i>
+                                <i class="fas fa-star cursor-pointer rating-star" data-rating="3"></i>
+                                <i class="fas fa-star cursor-pointer rating-star" data-rating="4"></i>
+                                <i class="fas fa-star cursor-pointer rating-star" data-rating="5"></i>
+                            </div>
+                            <input type="hidden" id="testimonialRating" value="0" required>
+                        </div>
+                        <div>
+                            <label for="testimonialText" class="block text-gray-700 font-medium mb-2">Votre témoignage</label>
+                            <textarea id="testimonialText" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required></textarea>
+                        </div>
+                        <div class="flex justify-end">
+                            <button type="submit" class="bg-secondary hover:bg-secondary-dark text-white font-medium py-2 px-6 rounded-lg transition-colors">
+                                Envoyer
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Conseils & Actualités</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Découvrez nos conseils d'entretien saisonniers et les dernières nouvelles
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="blog-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-primary flex items-center justify-center relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="100%" height="100%">
+                            <rect width="200" height="150" fill="#1a4d7c"/>
+                            <circle cx="50" cy="50" r="20" fill="white" opacity="0.7"/>
+                            <path d="M0 100 L50 70 L100 100 L150 70 L200 100 L200 150 L0 150 Z" fill="white"/>
+                        </svg>
+                        <div class="absolute top-4 left-4 bg-secondary text-white text-sm font-bold px-3 py-1 rounded-full">
+                            Hiver
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-500 text-sm mb-2">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>15 novembre 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">Comment préparer votre propriété pour l'hiver</h3>
+                        <p class="text-gray-600 mb-4">
+                            Découvrez nos conseils pour protéger votre terrain et vos installations avant l'arrivée des premières neiges.
+                        </p>
+                        <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                            Lire l'article <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Blog Post 2 -->
+                <div class="blog-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-secondary flex items-center justify-center relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="100%" height="100%">
+                            <rect width="200" height="150" fill="#4caf50"/>
+                            <circle cx="150" cy="40" r="20" fill="#ffeb3b" opacity="0.9"/>
+                            <path d="M0 100 Q100 50 200 100 L200 150 L0 150 Z" fill="#a5d6a7"/>
+                        </svg>
+                        <div class="absolute top-4 left-4 bg-primary text-white text-sm font-bold px-3 py-1 rounded-full">
+                            Été
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-500 text-sm mb-2">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>3 juin 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">5 astuces pour une pelouse parfaite</h3>
+                        <p class="text-gray-600 mb-4">
+                            Nos experts partagent leurs meilleures pratiques pour maintenir votre pelouse verte et en santé tout l'été.
+                        </p>
+                        <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                            Lire l'article <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Blog Post 3 -->
+                <div class="blog-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-yellow-600 flex items-center justify-center relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="100%" height="100%">
+                            <rect width="200" height="150" fill="#d97706"/>
+                            <circle cx="50" cy="40" r="20" fill="#f59e0b" opacity="0.9"/>
+                            <path d="M0 100 L200 100 L200 150 L0 150 Z" fill="#fbbf24" opacity="0.7"/>
+                            <path d="M20 80 L40 60 L60 80 L80 60 L100 80 L120 60 L140 80 L160 60 L180 80" stroke="#fbbf24" stroke-width="3" fill="none"/>
+                        </svg>
+                        <div class="absolute top-4 left-4 bg-red-600 text-white text-sm font-bold px-3 py-1 rounded-full">
+                            Automne
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-500 text-sm mb-2">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>20 septembre 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">Nettoyage d'automne : guide complet</h3>
+                        <p class="text-gray-600 mb-4">
+                            Tout ce que vous devez savoir pour préparer votre terrain avant l'arrivée de l'hiver.
+                        </p>
+                        <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                            Lire l'article <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Newsletter Subscription -->
+            <div class="mt-16 bg-primary rounded-xl shadow-lg p-8 text-white">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-6 md:mb-0 md:w-1/2">
+                        <h3 class="text-2xl font-bold mb-2">Restez informé</h3>
+                        <p class="text-gray-200">
+                            Abonnez-vous à notre infolettre pour recevoir des conseils d'entretien saisonniers et nos offres spéciales.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <form id="newsletterForm" class="flex flex-col sm:flex-row gap-4">
+                            <input type="email" placeholder="Votre adresse e-mail" class="flex-grow px-4 py-3 rounded-lg focus:outline-none text-gray-800" required>
+                            <button type="submit" class="bg-secondary hover:bg-secondary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors whitespace-nowrap">
+                                S'abonner
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-accent">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Questions fréquentes</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Trouvez rapidement des réponses à vos questions
+                </p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item py-4">
+                    <div class="faq-question flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-primary">Quand dois-je réserver mes services de déneigement?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </div>
+                    <div class="faq-answer mt-2 text-gray-600">
+                        <p>Nous recommandons de réserver vos services de déneigement dès septembre ou octobre pour garantir votre place. Les contrats sont généralement signés avant la première neige pour assurer une planification optimale.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="faq-item py-4">
+                    <div class="faq-question flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-primary">À quelle fréquence tondez-vous la pelouse?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </div>
+                    <div class="faq-answer mt-2 text-gray-600">
+                        <p>La fréquence de tonte dépend du forfait choisi et de la saison. En général, nous proposons des services hebdomadaires ou bi-mensuels pendant la saison de croissance. Nous adaptons notre calendrier en fonction des conditions météorologiques et de la croissance de votre pelouse.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="faq-item py-4">
+                    <div class="faq-question flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-primary">Quels sont vos délais d'intervention après une tempête de neige?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </div>
+                    <div class="faq-answer mt-2 text-gray-600">
+                        <p>Nos équipes sont mobilisées dès le début des précipitations. Pour les clients résidentiels, nous garantissons un passage dans les 24 heures suivant la fin des précipitations. Les clients commerciaux et les forfaits prioritaires bénéficient d'un délai d'intervention plus court.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="faq-item py-4">
+                    <div class="faq-question flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-primary">Proposez-vous des contrats annuels pour l'entretien complet?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </div>
+                    <div class="faq-answer mt-2 text-gray-600">
+                        <p>Oui, nous offrons des contrats annuels qui couvrent l'entretien de votre propriété tout au long de l'année. Ces forfaits comprennent le déneigement en hiver, la tonte de pelouse en été, ainsi que les nettoyages de printemps et d'automne. Ces contrats annuels bénéficient de tarifs préférentiels.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 5 -->
+                <div class="faq-item py-4">
+                    <div class="faq-question flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-primary">Êtes-vous assurés et certifiés?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </div>
+                    <div class="faq-answer mt-2 text-gray-600">
+                        <p>Oui, notre entreprise est entièrement assurée et possède plusieurs certifications reconnues dans le domaine de l'entretien extérieur et du paysagement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Contactez-nous</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Pour toute question, information ou demande de devis, remplissez le formulaire ci-dessous ou contactez-nous directement.
+                </p>
+            </div>
+            <form class="max-w-2xl mx-auto space-y-6">
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="name">Nom</label>
+                    <input id="name" name="name" type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="email">Email</label>
+                    <input id="email" name="email" type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-medium py-3 rounded-lg transition-colors">
+                    Envoyer
+                </button>
+            </form>
+            <div class="mt-12 text-center text-gray-600">
+                <p><i class="fas fa-envelope mr-2"></i> info@forcec.ca</p>
+                <p><i class="fas fa-phone mr-2"></i> (819) 123-4567</p>
+                <p><i class="fas fa-map-marker-alt mr-2"></i> Sainte-Monique, Québec</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-6 dark:bg-dark dark:text-white">
+        <div class="container mx-auto px-4 text-center">
+            &copy; 2025 Force C Inc. Tous droits réservés.
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hidden z-50 hover:bg-secondary transition" aria-label="عودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="main.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("WrSVCqjcRfRBFqt7p");
+        })();
+    </script>
+</body>
+</html>
