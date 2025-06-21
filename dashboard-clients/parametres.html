@@ -1,1 +1,105 @@
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Paramètres | Force C Inc.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../images/logo.png">
+</head>
+<body class="bg-[#F8F9FB] font-sans min-h-screen">
+  <!-- Header -->
+  <header class="bg-[#22477A] text-white flex justify-between items-center px-8 h-16 shadow-md fixed w-full z-20">
+    <div class="flex items-center gap-3">
+      <img src="../images/logo.png" class="h-8" alt="Force C Logo">
+      <span class="font-bold text-xl">Force C Inc.</span>
+    </div>
+    <div class="flex items-center gap-8">
+      <span class="text-lg">Tableau de bord</span>
+      <button class="relative">
+        <i class="fa fa-bell"></i>
+        <span class="absolute -top-2 -right-2 bg-red-500 text-xs rounded-full w-5 h-5 flex items-center justify-center">2</span>
+      </button>
+      <div class="flex items-center gap-2 cursor-pointer">
+        <img src="../images/user.jpg" class="h-8 w-8 rounded-full" alt="Utilisateur">
+        <span>tarekben96</span>
+        <i class="fa fa-chevron-down"></i>
+      </div>
+    </div>
+  </header>
+  <!-- Sidebar -->
+  <aside class="fixed top-16 left-0 h-full w-56 bg-[#E6F0FA] text-[#22477A] shadow-md flex flex-col py-6 gap-2 z-10">
+    <a href="index.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+      <i class="fa fa-users"></i> Clients
+    </a>
+    <a href="employes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+      <i class="fa fa-user-cog"></i> Employés
+    </a>
+    <a href="commandes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+      <i class="fa fa-tasks"></i> Commandes
+    </a>
+    <a href="factures.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+      <i class="fa fa-credit-card"></i> Factures
+    </a>
+    <a href="statistiques.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+      <i class="fa fa-chart-bar"></i> Statistiques
+    </a>
+    <a href="parametres.html" class="flex items-center gap-3 px-6 py-3 rounded-lg bg-white shadow font-bold">
+      <i class="fa fa-cog"></i> Paramètres
+    </a>
+  </aside>
+  <!-- Main Content -->
+  <main class="ml-56 pt-20 px-6 min-h-screen">
+    <h1 class="text-2xl font-bold text-[#22477A] mb-8">Paramètres du compte</h1>
+    <div class="bg-white rounded-lg shadow p-8 max-w-xl mx-auto mb-10">
+      <h2 class="text-lg font-bold text-[#22477A] mb-4">Informations personnelles</h2>
+      <form id="profileForm">
+        <div class="mb-4">
+          <label class="block font-medium mb-1">Nom d'utilisateur :</label>
+          <input type="text" class="border rounded-lg px-3 py-2 w-full" value="tarekben96" required>
+        </div>
+        <div class="mb-4">
+          <label class="block font-medium mb-1">Adresse e-mail :</label>
+          <input type="email" class="border rounded-lg px-3 py-2 w-full" value="tarek@email.com" required>
+        </div>
+        <div class="mb-4">
+          <label class="block font-medium mb-1">Changer le mot de passe :</label>
+          <input type="password" class="border rounded-lg px-3 py-2 w-full" placeholder="Nouveau mot de passe">
+        </div>
+        <div class="flex gap-3">
+          <button type="submit" class="bg-[#22477A] text-white px-4 py-2 rounded-lg font-bold">Enregistrer</button>
+          <button type="reset" class="bg-gray-200 px-4 py-2 rounded-lg">Annuler</button>
+        </div>
+      </form>
+    </div>
+    <div class="bg-white rounded-lg shadow p-8 max-w-xl mx-auto">
+      <h2 class="text-lg font-bold text-[#22477A] mb-4">Préférences</h2>
+      <form id="preferencesForm">
+        <div class="mb-4 flex items-center gap-3">
+          <input type="checkbox" id="notif1" class="accent-[#22477A]">
+          <label for="notif1" class="font-medium">Recevoir des notifications par e-mail</label>
+        </div>
+        <div class="mb-4 flex items-center gap-3">
+          <input type="checkbox" id="notif2" class="accent-[#22477A]">
+          <label for="notif2" class="font-medium">Activer le mode sombre (bientôt)</label>
+        </div>
+        <button type="submit" class="bg-[#22477A] text-white px-4 py-2 rounded-lg font-bold">Enregistrer</button>
+      </form>
+    </div>
+  </main>
+  <script src="../main.js"></script>
+  <script>
+    // Personal info form
+    document.getElementById('profileForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Informations enregistrées (démo)');
+    });
+    // Preferences form
+    document.getElementById('preferencesForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Préférences enregistrées (démo)');
+    });
+  </script>
+</body>
+</html>
