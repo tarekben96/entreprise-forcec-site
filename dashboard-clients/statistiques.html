@@ -1,1 +1,88 @@
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Statistiques | Force C Inc.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../images/logo.png">
+</head>
+<body class="bg-[#F8F9FB] font-sans min-h-screen">
+  <!-- Header -->
+  <header class="bg-[#22477A] text-white flex justify-between items-center px-8 h-16 shadow-md fixed w-full z-20">
+    <div class="flex items-center gap-3">
+      <img src="../images/logo.png" class="h-8" alt="Force C Logo">
+      <span class="font-bold text-xl">Force C Inc.</span>
+    </div>
+    <div class="flex items-center gap-8">
+      <span class="text-lg">Tableau de bord</span>
+      <button class="relative">
+        <i class="fa fa-bell"></i>
+        <span class="absolute -top-2 -right-2 bg-red-500 text-xs rounded-full w-5 h-5 flex items-center justify-center">1</span>
+      </button>
+      <div class="flex items-center gap-2 cursor-pointer">
+        <img src="../images/user.jpg" class="h-8 w-8 rounded-full" alt="Utilisateur">
+        <span>tarekben96</span>
+        <i class="fa fa-chevron-down"></i>
+      </div>
+    </div>
+  </header>
+  <!-- Sidebar -->
+  <aside class="fixed top-16 left-0 h-full w-56 bg-[#E6F0FA] text-[#22477A] shadow-md flex flex-col py-6 gap-2 z-10">
+    <a href="index.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+      <i class="fa fa-users"></i> Clients
+    </a>
+    <a href="employes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+      <i class="fa fa-user-cog"></i> Employés
+    </a>
+    <a href="commandes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+      <i class="fa fa-tasks"></i> Commandes
+    </a>
+    <a href="factures.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+      <i class="fa fa-credit-card"></i> Factures
+    </a>
+    <a href="statistiques.html" class="flex items-center gap-3 px-6 py-3 rounded-lg bg-white shadow font-bold">
+      <i class="fa fa-chart-bar"></i> Statistiques
+    </a>
+    <a href="parametres.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+      <i class="fa fa-cog"></i> Paramètres
+    </a>
+  </aside>
+  <!-- Main Content -->
+  <main class="ml-56 pt-20 px-6 min-h-screen">
+    <h1 class="text-2xl font-bold text-[#22477A] mb-8">Statistiques générales</h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <!-- Stat cards -->
+      <div class="bg-white rounded-lg shadow flex flex-col items-center p-6">
+        <i class="fa fa-users fa-2x text-[#22477A] mb-2"></i>
+        <div class="text-3xl font-bold text-[#22477A]">43</div>
+        <div class="text-gray-600">Clients actifs</div>
+      </div>
+      <div class="bg-white rounded-lg shadow flex flex-col items-center p-6">
+        <i class="fa fa-user-cog fa-2x text-[#22477A] mb-2"></i>
+        <div class="text-3xl font-bold text-[#22477A]">8</div>
+        <div class="text-gray-600">Employés</div>
+      </div>
+      <div class="bg-white rounded-lg shadow flex flex-col items-center p-6">
+        <i class="fa fa-tasks fa-2x text-[#22477A] mb-2"></i>
+        <div class="text-3xl font-bold text-[#22477A]">12</div>
+        <div class="text-gray-600">Commandes en cours</div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Example chart/graph placeholder -->
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="font-bold text-[#22477A] mb-4">Évolution des commandes (année)</h2>
+        <div class="flex items-center justify-center min-h-[200px] text-gray-400">[Graphique à insérer]</div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="font-bold text-[#22477A] mb-4">Répartition des revenus</h2>
+        <div class="flex items-center justify-center min-h-[200px] text-gray-400">[Graphique à insérer]</div>
+      </div>
+    </div>
+  </main>
+  <script src="../main.js"></script>
+  <!-- You can add JS chart library imports below if needed in future -->
+</body>
+</html>
