@@ -4,18 +4,20 @@
   <meta charset="UTF-8">
   <title>Dashboard | Force C Inc.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TailwindCSS CDN for utility classes -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome for modern icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Custom styles for Dashboard (stat cards, grid, etc.) -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Favicon -->
   <link rel="icon" href="images/logo.png">
-  <style>
-    .transition-card { transition: transform .22s, box-shadow .22s; }
-    .animate-fadeIn { animation: fadeIn 1.2s; }
-    @keyframes fadeIn { 0%{opacity:0;transform:translateY(20px);} 100%{opacity:1;transform:translateY(0);} }
-  </style>
+  <!-- Custom JS for dynamic greeting and animated stats -->
+  <script defer src="main.js"></script>
 </head>
 <body class="bg-[#F8F9FB] min-h-screen font-sans relative overflow-x-hidden">
 
-  <!-- SVG خلفيات زخرفية -->
+  <!-- Decorative SVG backgrounds: purely visual, not interactive -->
   <svg class="absolute left-0 top-0 opacity-10 pointer-events-none z-0" width="700" height="220">
     <circle cx="150" cy="110" r="110" fill="#22477A"/>
     <ellipse cx="500" cy="50" rx="70" ry="40" fill="#2d7be5"/>
@@ -27,13 +29,14 @@
     <ellipse cx="200" cy="150" rx="60" ry="30" fill="#22c55e"/>
   </svg>
 
-  <!-- Header مطابق للصفحة الرئيسية -->
+  <!-- Header: fixed top navigation, matches landing page branding -->
   <header class="bg-[#22477A] text-white flex justify-between items-center px-8 h-20 shadow-lg fixed w-full z-20">
     <div class="flex items-center gap-3">
       <img src="images/logo.png" class="h-10" alt="Force C Logo">
       <span class="font-bold text-2xl tracking-wide drop-shadow-lg">Force C Inc.</span>
     </div>
     <div class="flex items-center gap-4">
+      <!-- Dynamic greeting populated by main.js -->
       <span id="greeting" class="text-lg md:text-xl font-semibold drop-shadow"></span>
       <button class="bg-[#22c55e] hover:bg-[#16a34a] transition text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 shadow-md focus:outline-none active:scale-95">
         <i class="fa fa-sign-out-alt"></i> Déconnexion
@@ -41,9 +44,9 @@
     </div>
   </header>
 
-  <!-- Sidebar -->
+  <!-- Sidebar: fixed vertical navigation for dashboard sections -->
   <aside class="fixed top-20 left-0 h-full w-56 bg-white/90 text-[#22477A] shadow-lg flex flex-col py-6 gap-2 z-10 backdrop-blur-md">
-    <a href="dashboard.html" class="flex items-center gap-3 px-6 py-3 rounded-lg bg-[#22c55e]/20 font-bold transition">
+    <a href="index.html" class="flex items-center gap-3 px-6 py-3 rounded-lg bg-[#22c55e]/20 font-bold transition">
       <i class="fa fa-home"></i> Accueil
     </a>
     <a href="clients.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#22c55e]/10 transition">
@@ -66,57 +69,61 @@
     </a>
   </aside>
 
-  <!-- Main Content -->
+  <!-- Main Content area: shifted right by sidebar, padding for fixed header -->
   <main class="ml-56 pt-28 px-4 sm:px-8 min-h-screen relative z-10">
-    <!-- Welcome -->
-    <div class="mb-10 animate-fadeIn">
+    <!-- Welcome message section -->
+    <div class="mb-10">
       <h1 class="text-4xl font-extrabold text-[#22477A] drop-shadow mb-2 flex items-center gap-3">
         Bienvenue, tarekben96
         <span class="inline-block animate-bounce text-[#22c55e]">👋</span>
       </h1>
       <div class="text-[#2d7be5] font-semibold text-lg">Votre tableau de bord Force C Inc.</div>
     </div>
-    <!-- Stat Cards: شبكة متجاوبة بحجم موحد -->
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
-      <!-- كارت 1 -->
-      <div class="bg-white rounded-xl shadow-lg flex flex-col items-center justify-center p-6 min-h-[170px] max-w-full transition-card border-t-4 border-[#22c55e] hover:scale-105 hover:shadow-2xl group">
-        <div class="bg-[#22c55e]/10 p-3 rounded-full mb-2">
-          <i class="fa fa-users fa-2x text-[#22c55e]"></i>
-        </div>
-        <div class="text-4xl font-extrabold text-[#22477A] mb-1">43</div>
-        <div class="text-base font-bold text-[#22477A]">Clients actifs</div>
-        <span class="mt-1 text-xs text-[#22c55e] bg-[#22c55e]/10 rounded-full px-3 py-1 font-semibold">+5 cette semaine</span>
+
+    <!-- Stats Cards Section: Responsive grid, unified sizing, animated numbers -->
+    <div class="stats-grid my-12">
+      <!-- Active Clients stat card -->
+      <div class="stat-card border-t-4 border-[#22c55e]">
+        <span class="stat-icon" style="background:rgba(34,197,94,0.09);">
+          <i class="fa fa-users" style="color:#22c55e;"></i>
+        </span>
+        <!-- This value animates from 0 to 43 via main.js -->
+        <div class="stat-value" id="stat-clients">0</div>
+        <div class="stat-label">Clients actifs</div>
+        <span class="stat-info">+5 cette semaine</span>
       </div>
-      <!-- كارت 2 -->
-      <div class="bg-white rounded-xl shadow-lg flex flex-col items-center justify-center p-6 min-h-[170px] max-w-full transition-card border-t-4 border-[#2d7be5] hover:scale-105 hover:shadow-2xl group">
-        <div class="bg-[#2d7be5]/10 p-3 rounded-full mb-2">
-          <i class="fa fa-user-cog fa-2x text-[#2d7be5]"></i>
-        </div>
-        <div class="text-4xl font-extrabold text-[#22477A] mb-1">8</div>
-        <div class="text-base font-bold text-[#22477A]">Employés</div>
-        <span class="mt-1 text-xs text-[#2d7be5] bg-[#2d7be5]/10 rounded-full px-3 py-1 font-semibold">Stable</span>
+      <!-- Employees stat card -->
+      <div class="stat-card border-t-4 border-[#2d7be5]">
+        <span class="stat-icon" style="background:rgba(45,123,229,0.09);">
+          <i class="fa fa-user-cog" style="color:#2d7be5;"></i>
+        </span>
+        <div class="stat-value" id="stat-employees">0</div>
+        <div class="stat-label">Employés</div>
+        <span class="stat-info" style="color:#2d7be5;background:#eaf1fb;">Stable</span>
       </div>
-      <!-- كارت 3 -->
-      <div class="bg-white rounded-xl shadow-lg flex flex-col items-center justify-center p-6 min-h-[170px] max-w-full transition-card border-t-4 border-[#22477A] hover:scale-105 hover:shadow-2xl group">
-        <div class="bg-[#22477A]/10 p-3 rounded-full mb-2">
-          <i class="fa fa-tasks fa-2x text-[#22477A]"></i>
-        </div>
-        <div class="text-4xl font-extrabold text-[#22477A] mb-1">12</div>
-        <div class="text-base font-bold text-[#22477A]">Commandes en cours</div>
-        <span class="mt-1 text-xs text-[#22477A] bg-[#22477A]/10 rounded-full px-3 py-1 font-semibold">2 urgentes</span>
+      <!-- Orders in progress stat card -->
+      <div class="stat-card border-t-4 border-[#22477A]">
+        <span class="stat-icon" style="background:rgba(34,71,122,0.10);">
+          <i class="fa fa-tasks" style="color:#22477A;"></i>
+        </span>
+        <div class="stat-value" id="stat-orders">0</div>
+        <div class="stat-label">Commandes en cours</div>
+        <span class="stat-info" style="color:#22477A;background:#e7eefa;">2 urgentes</span>
       </div>
-      <!-- كارت 4 -->
-      <div class="bg-white rounded-xl shadow-lg flex flex-col items-center justify-center p-6 min-h-[170px] max-w-full transition-card border-t-4 border-[#22c55e] hover:scale-105 hover:shadow-2xl group">
-        <div class="bg-[#22c55e]/10 p-3 rounded-full mb-2">
-          <i class="fa fa-credit-card fa-2x text-[#22c55e]"></i>
-        </div>
-        <div class="text-4xl font-extrabold text-[#22477A] mb-1">27</div>
-        <div class="text-base font-bold text-[#22477A]">Factures</div>
-        <span class="mt-1 text-xs text-[#22c55e] bg-[#22c55e]/10 rounded-full px-3 py-1 font-semibold">3 impayées</span>
+      <!-- Invoices stat card -->
+      <div class="stat-card border-t-4 border-[#22c55e]">
+        <span class="stat-icon" style="background:rgba(34,197,94,0.09);">
+          <i class="fa fa-credit-card" style="color:#22c55e;"></i>
+        </span>
+        <div class="stat-value" id="stat-invoices">0</div>
+        <div class="stat-label">Factures</div>
+        <span class="stat-info">3 impayées</span>
       </div>
     </div>
-    <!-- Quick Access Cards -->
+
+    <!-- Quick Access Cards Section: links to dashboard sections (optional, can be removed or customized) -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Each card links to a dashboard section with icon and description -->
       <a href="clients.html" class="group bg-white hover:bg-[#22c55e]/10 transition-card rounded-2xl shadow-lg flex flex-col items-center p-8 text-[#22477A] cursor-pointer border-2 border-transparent hover:border-[#22c55e]">
         <i class="fa fa-users fa-2x mb-3 group-hover:text-[#22c55e] transition"></i>
         <span class="font-bold mb-1 text-lg">Clients</span>
@@ -154,24 +161,12 @@
         <span class="mt-3 text-xs text-[#22477A] font-semibold group-hover:underline transition">Accéder <i class="fa fa-arrow-right"></i></span>
       </a>
     </div>
-    <!-- Footer -->
+
+    <!-- Footer: copyright and credits -->
     <div class="text-center text-gray-400 mt-16 mb-4 text-sm">
       &copy; 2025 Force C Inc. – Dashboard propulsé par <span class="font-semibold tracking-wide text-[#22477A]">tarekben96</span>
     </div>
   </main>
-  <script>
-    // Dynamic greeting by time
-    function getGreeting() {
-      const hour = new Date().getHours();
-      if (hour < 12) return "Bonjour, tarekben96 👋";
-      else if (hour < 18) return "Bon après-midi, tarekben96 👋";
-      else return "Bonsoir, tarekben96 👋";
-    }
-    document.getElementById('greeting').textContent = getGreeting();
 
-    function logout() {
-      alert("Déconnexion effectuée ! (démo)");
-    }
-  </script>
 </body>
 </html>
