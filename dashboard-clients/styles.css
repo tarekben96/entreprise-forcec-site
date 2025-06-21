@@ -1,1 +1,12 @@
-.
+/* styles.css */
+/* Main site colors and fonts are inherited from landing page styles */
+body {
+  /* Use the main font and background color from the home page */
+  font-family: 'Cairo', sans-serif;
+  background-color: #F8F9FB;
+}
+/* Example: keep same card and button styles as landing page */
+.btn-primary {
+  @apply bg-[#22477A] text-white rounded-lg shadow hover:bg-[#18315b];
+}
+/* ... (rest of your landing page custom styles) ... */
