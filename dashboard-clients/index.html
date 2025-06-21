@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="images/logo.png">
   <style>
-    .transition-card { transition: transform .25s, box-shadow .25s; }
+    .transition-card { transition: transform .22s, box-shadow .22s; }
     .animate-fadeIn { animation: fadeIn 1.2s; }
     @keyframes fadeIn { 0%{opacity:0;transform:translateY(20px);} 100%{opacity:1;transform:translateY(0);} }
   </style>
 </head>
 <body class="bg-[#F8F9FB] min-h-screen font-sans relative overflow-x-hidden">
 
-  <!-- SVG خلفية للزخرفة -->
+  <!-- SVG خلفيات زخرفية -->
   <svg class="absolute left-0 top-0 opacity-10 pointer-events-none z-0" width="700" height="220">
     <circle cx="150" cy="110" r="110" fill="#22477A"/>
     <ellipse cx="500" cy="50" rx="70" ry="40" fill="#2d7be5"/>
@@ -27,7 +27,7 @@
     <ellipse cx="200" cy="150" rx="60" ry="30" fill="#22c55e"/>
   </svg>
 
-  <!-- Header مطابق للهروب -->
+  <!-- Header مطابق للصفحة الرئيسية -->
   <header class="bg-[#22477A] text-white flex justify-between items-center px-8 h-20 shadow-lg fixed w-full z-20">
     <div class="flex items-center gap-3">
       <img src="images/logo.png" class="h-10" alt="Force C Logo">
@@ -76,31 +76,43 @@
       </h1>
       <div class="text-[#2d7be5] font-semibold text-lg">Votre tableau de bord Force C Inc.</div>
     </div>
-    <!-- Stat Cards: شبكة متجاوبة بحجم موحد حتى على الهاتف -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-      <div class="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 min-h-[170px] min-w-0 transition-card border-t-4 border-[#22c55e] hover:scale-105 hover:shadow-2xl group">
-        <i class="fa fa-users fa-2x text-[#22477A] mb-2 group-hover:text-[#22c55e] transition"></i>
-        <div class="text-3xl font-bold text-[#22477A]">43</div>
-        <div class="text-gray-600">Clients actifs</div>
-        <span class="mt-2 inline-block rounded-full bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 text-xs font-semibold">+5 cette semaine</span>
+    <!-- Stat Cards: شبكة متجاوبة بحجم موحد -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
+      <!-- كارت 1 -->
+      <div class="bg-white rounded-xl shadow-lg flex flex-col items-center justify-center p-6 min-h-[170px] max-w-full transition-card border-t-4 border-[#22c55e] hover:scale-105 hover:shadow-2xl group">
+        <div class="bg-[#22c55e]/10 p-3 rounded-full mb-2">
+          <i class="fa fa-users fa-2x text-[#22c55e]"></i>
+        </div>
+        <div class="text-4xl font-extrabold text-[#22477A] mb-1">43</div>
+        <div class="text-base font-bold text-[#22477A]">Clients actifs</div>
+        <span class="mt-1 text-xs text-[#22c55e] bg-[#22c55e]/10 rounded-full px-3 py-1 font-semibold">+5 cette semaine</span>
       </div>
-      <div class="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 min-h-[170px] min-w-0 transition-card border-t-4 border-[#2d7be5] hover:scale-105 hover:shadow-2xl group">
-        <i class="fa fa-user-cog fa-2x text-[#22477A] mb-2 group-hover:text-[#2d7be5] transition"></i>
-        <div class="text-3xl font-bold text-[#22477A]">8</div>
-        <div class="text-gray-600">Employés</div>
-        <span class="mt-2 inline-block rounded-full bg-[#2d7be5]/10 text-[#2d7be5] px-3 py-1 text-xs font-semibold">Stable</span>
+      <!-- كارت 2 -->
+      <div class="bg-white rounded-xl shadow-lg flex flex-col items-center justify-center p-6 min-h-[170px] max-w-full transition-card border-t-4 border-[#2d7be5] hover:scale-105 hover:shadow-2xl group">
+        <div class="bg-[#2d7be5]/10 p-3 rounded-full mb-2">
+          <i class="fa fa-user-cog fa-2x text-[#2d7be5]"></i>
+        </div>
+        <div class="text-4xl font-extrabold text-[#22477A] mb-1">8</div>
+        <div class="text-base font-bold text-[#22477A]">Employés</div>
+        <span class="mt-1 text-xs text-[#2d7be5] bg-[#2d7be5]/10 rounded-full px-3 py-1 font-semibold">Stable</span>
       </div>
-      <div class="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 min-h-[170px] min-w-0 transition-card border-t-4 border-[#22477A] hover:scale-105 hover:shadow-2xl group">
-        <i class="fa fa-tasks fa-2x text-[#22477A] mb-2 group-hover:text-[#2d7be5] transition"></i>
-        <div class="text-3xl font-bold text-[#22477A]">12</div>
-        <div class="text-gray-600">Commandes en cours</div>
-        <span class="mt-2 inline-block rounded-full bg-[#22477A]/10 text-[#22477A] px-3 py-1 text-xs font-semibold">2 urgentes</span>
+      <!-- كارت 3 -->
+      <div class="bg-white rounded-xl shadow-lg flex flex-col items-center justify-center p-6 min-h-[170px] max-w-full transition-card border-t-4 border-[#22477A] hover:scale-105 hover:shadow-2xl group">
+        <div class="bg-[#22477A]/10 p-3 rounded-full mb-2">
+          <i class="fa fa-tasks fa-2x text-[#22477A]"></i>
+        </div>
+        <div class="text-4xl font-extrabold text-[#22477A] mb-1">12</div>
+        <div class="text-base font-bold text-[#22477A]">Commandes en cours</div>
+        <span class="mt-1 text-xs text-[#22477A] bg-[#22477A]/10 rounded-full px-3 py-1 font-semibold">2 urgentes</span>
       </div>
-      <div class="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 min-h-[170px] min-w-0 transition-card border-t-4 border-[#22c55e] hover:scale-105 hover:shadow-2xl group">
-        <i class="fa fa-credit-card fa-2x text-[#22477A] mb-2 group-hover:text-[#22c55e] transition"></i>
-        <div class="text-3xl font-bold text-[#22477A]">27</div>
-        <div class="text-gray-600">Factures</div>
-        <span class="mt-2 inline-block rounded-full bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 text-xs font-semibold">3 impayées</span>
+      <!-- كارت 4 -->
+      <div class="bg-white rounded-xl shadow-lg flex flex-col items-center justify-center p-6 min-h-[170px] max-w-full transition-card border-t-4 border-[#22c55e] hover:scale-105 hover:shadow-2xl group">
+        <div class="bg-[#22c55e]/10 p-3 rounded-full mb-2">
+          <i class="fa fa-credit-card fa-2x text-[#22c55e]"></i>
+        </div>
+        <div class="text-4xl font-extrabold text-[#22477A] mb-1">27</div>
+        <div class="text-base font-bold text-[#22477A]">Factures</div>
+        <span class="mt-1 text-xs text-[#22c55e] bg-[#22c55e]/10 rounded-full px-3 py-1 font-semibold">3 impayées</span>
       </div>
     </div>
     <!-- Quick Access Cards -->
