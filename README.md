@@ -45,7 +45,16 @@ Utilisez des variables d'environnement ou configurez des règles de sécurité E
 - Ajouter des tests automatisés.
 - Améliorer l'accessibilité (contraste, navigation clavier, etc.).
 
+## License
+
+- All rights reserved © 2025 Tarek Benkhedim (tarekben96)
+
+- This project and all its files are protected by copyright. No part of this project may be copied, used, distributed, or reproduced in any form without the express written permission of the owner.
+
 ## Auteur
 
 - [Force C Inc.](mailto:info@forcec.ca)
 - Développement web : Tarek Benkhedim
+
+
+
