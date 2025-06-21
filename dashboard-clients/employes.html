@@ -12,7 +12,7 @@
   <!-- Header -->
   <header class="bg-[#22477A] text-white flex justify-between items-center px-8 h-16 shadow-md fixed w-full z-20">
     <div class="flex items-center gap-3">
-      <img src="../images/logo.png" class="h-8" alt="Force C Logo" onerror="this.style.display='none'">
+      <img src="../images/logo.png" class="h-8" alt="Force C Logo">
       <span class="font-bold text-xl">Force C Inc.</span>
     </div>
     <div class="flex items-center gap-8">
@@ -22,7 +22,7 @@
         <span class="absolute -top-2 -right-2 bg-red-500 text-xs rounded-full w-5 h-5 flex items-center justify-center">2</span>
       </button>
       <div class="flex items-center gap-2 cursor-pointer">
-        <img src="../images/user.jpg" class="h-8 w-8 rounded-full" alt="Utilisateur" onerror="this.style.display='none'">
+        <img src="../images/user.jpg" class="h-8 w-8 rounded-full" alt="Utilisateur">
         <span>tarekben96</span>
         <i class="fa fa-chevron-down"></i>
       </div>
@@ -33,7 +33,7 @@
     <a href="index.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
       <i class="fa fa-users"></i> Clients
     </a>
-    <a href="employes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white font-bold bg-white shadow">
+    <a href="employes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg bg-white shadow font-bold">
       <i class="fa fa-user-cog"></i> Employés
     </a>
     <a href="commandes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
@@ -49,7 +49,7 @@
       <i class="fa fa-cog"></i> Paramètres
     </a>
   </aside>
-  <!-- Main content -->
+  <!-- Main Content -->
   <main class="ml-56 pt-20 px-6 min-h-screen">
     <div class="flex justify-between items-center mb-6">
       <h1 class="text-2xl font-bold text-[#22477A]">Gestion des employés</h1>
@@ -71,11 +71,10 @@
           </tr>
         </thead>
         <tbody>
-          <!-- Example row -->
           <tr class="hover:bg-[#F8F9FB]">
             <td class="py-2 px-2">1</td>
             <td class="py-2 px-2">
-              <img src="../images/employee1.jpg" class="w-8 h-8 rounded-full mx-auto" alt="Employé" onerror="this.style.display='none'">
+              <img src="../images/employee1.jpg" class="w-8 h-8 rounded-full mx-auto" alt="Employé">
             </td>
             <td class="py-2 px-2 font-medium">Sami Dubois</td>
             <td class="py-2 px-2">Technicien</td>
@@ -85,21 +84,21 @@
             </td>
             <td class="py-2 px-2 flex gap-2 justify-center">
               <button class="text-[#22477A] hover:underline mx-1" title="Voir"><i class="fa fa-eye"></i></button>
-              <button class="text-[#22477A] hover:underline mx-1" title="Modifier"><i class="fa fa-edit"></i></button>
-              <button class="text-red-600 hover:underline mx-1" title="Supprimer"><i class="fa fa-trash"></i></button>
+              <button class="text-[#22477A] hover:underline mx-1" title="Modifier" onclick="editEmployee(1)"><i class="fa fa-edit"></i></button>
+              <button class="text-red-600 hover:underline mx-1" title="Supprimer" onclick="deleteEmployee(1)"><i class="fa fa-trash"></i></button>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
   </main>
-  <!-- Modal example (add/edit) -->
+  <!-- Modal Add/Edit Employee -->
   <div id="modal" class="fixed inset-0 z-50 bg-black bg-opacity-40 flex items-center justify-center hidden">
     <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-md relative">
       <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-red-600 text-xl">
         <i class="fa fa-times"></i>
       </button>
-      <h2 class="text-xl font-bold text-[#22477A] mb-4">Ajouter un employé</h2>
+      <h2 id="modalTitle" class="text-xl font-bold text-[#22477A] mb-4">Ajouter un employé</h2>
       <form id="addEmployeeForm" autocomplete="off">
         <div class="mb-3">
           <label class="block text-sm font-medium">Nom complet :</label>
@@ -126,13 +125,11 @@
   </div>
   <script src="../main.js"></script>
   <script>
-    // Open modal
-    function openModal() { document.getElementById('modal').classList.remove('hidden'); }
-    // Close modal
+    function openModal() { document.getElementById('modalTitle').textContent = 'Ajouter un employé'; document.getElementById('modal').classList.remove('hidden'); }
     function closeModal() { document.getElementById('modal').classList.add('hidden'); }
-    // Demo: block form submit
-    document.addEventListener('DOMContentLoaded', function () {
-      const form = document.getElementById('addEmployeeForm');
+    function editEmployee(id) { document.getElementById('modalTitle').textContent = 'Modifier un employé'; document.getElementById('modal').classList.remove('hidden'); }
+    function deleteEmployee(id) { if (confirm("Voulez-vous vraiment supprimer cet employé ?")) alert("Employé supprimé (démo)"); }
+    document.add const form = document.getElementById('addEmployeeForm');
       if (form) {
         form.addEventListener('submit', function (e) {
           e.preventDefault();
@@ -144,4 +141,4 @@
     });
   </script>
 </body>
-  </html>
+</html>
