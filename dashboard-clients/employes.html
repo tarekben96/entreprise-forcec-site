@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <title>Employés | Force C Inc.</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel=".css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
   <link rel="icon" href="../images/logo.png">
 </head>
 <body class="bg-[#F8F9FB] font-sans min-h-screen">
   <!-- Header -->
-    <!-- Header -->
   <header class="bg-[#22477A] text-white flex justify-between items-center px-8 h-16 shadow-md fixed w-full z-20">
     <div class="flex items-center gap-3">
       <img src="../images/logo.png" class="h-8" alt="Force C Logo">
@@ -19,7 +19,7 @@
       <span class="text-lg">Tableau de bord</span>
       <button class="relative">
         <i class="fa fa-bell"></i>
-        <span class="absolute -top-2 -right-2 bg-red-500 text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+        <span class="absolute -top-2 -right-2 bg-red-500 text-xs rounded-full w-5 h-5 flex items-center justify-center">2</span>
       </button>
       <div class="flex items-center gap-2 cursor-pointer">
         <img src="../images/user.jpg" class="h-8 w-8 rounded-full" alt="Utilisateur">
@@ -31,12 +31,9 @@
   <!-- Sidebar -->
   <aside class="fixed top-16 left-0 h-full w-56 bg-[#E6F0FA] text-[#22477A] shadow-md flex flex-col py-6 gap-2 z-10">
     <a href="index.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
-      <i class="fa fa-home"></i> Accueil
-    </a>
-    <a href="clients.html" class="flex items-center gap-3 px-6 py-3 rounded-lg bg-white shadow font-bold">
       <i class="fa fa-users"></i> Clients
     </a>
-    <a href="employes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+    <a href="employes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg bg-white shadow font-bold">
       <i class="fa fa-user-cog"></i> Employés
     </a>
     <a href="commandes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
@@ -52,7 +49,6 @@
       <i class="fa fa-cog"></i> Paramètres
     </a>
   </aside>
-  <!-- Main Content -->
   <!-- Main Content -->
   <main class="ml-56 pt-20 px-6 min-h-screen">
     <div class="flex justify-between items-center mb-6">
