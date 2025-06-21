@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="images/logo.png">
   <style>
-    .transition-card { transition: transform .25s cubic-bezier(.4,0,.2,1), box-shadow .25s cubic-bezier(.4,0,.2,1);}
+    .transition-card { transition: transform .25s, box-shadow .25s; }
     .animate-fadeIn { animation: fadeIn 1.2s; }
     @keyframes fadeIn { 0%{opacity:0;transform:translateY(20px);} 100%{opacity:1;transform:translateY(0);} }
   </style>
 </head>
 <body class="bg-[#F8F9FB] min-h-screen font-sans relative overflow-x-hidden">
 
-  <!-- SVG Background Decorations -->
+  <!-- SVG الخلفية للزخرفة -->
   <svg class="absolute left-0 top-0 opacity-10 pointer-events-none z-0" width="700" height="220">
     <circle cx="150" cy="110" r="110" fill="#22477A"/>
     <ellipse cx="500" cy="50" rx="70" ry="40" fill="#2d7be5"/>
@@ -27,7 +27,7 @@
     <ellipse cx="200" cy="150" rx="60" ry="30" fill="#22c55e"/>
   </svg>
 
-  <!-- Header (مطابق صفحة الهبوط) -->
+  <!-- Header مطابق لصفحة الهبوط -->
   <header class="bg-[#22477A] text-white flex justify-between items-center px-8 h-20 shadow-lg fixed w-full z-20">
     <div class="flex items-center gap-3">
       <img src="images/logo.png" class="h-10" alt="Force C Logo">
@@ -76,8 +76,8 @@
       </h1>
       <div class="text-[#2d7be5] font-semibold text-lg">Votre tableau de bord Force C Inc.</div>
     </div>
-    <!-- Stat Cards: grid responsive, no horizontal scroll -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <!-- Stat Cards: شبكة متجاوبة حتى على الهاتف -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
       <div class="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 border-t-4 border-[#22c55e] transition-card hover:scale-105 hover:shadow-2xl group">
         <i class="fa fa-users fa-2x text-[#22477A] mb-2 group-hover:text-[#22c55e] transition"></i>
         <div class="text-3xl font-bold text-[#22477A]">43</div>
