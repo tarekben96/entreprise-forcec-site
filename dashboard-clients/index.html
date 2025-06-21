@@ -2,12 +2,15 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard | Force Chttps://cdn.tailwindcss.com"></script>
+  <title>Dashboard | Force C Inc.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="images/logo.png">
 </head>
-<body class="bg-[#F8F9FB] font-sans min-h-screen relative overflow-x-hidden">
-  <!-- SVG Background Decoration -->
+<body class="bg-gradient-to-br from-[#22477A] via-[#2d7be5] to-[#F8F9FB] min-h-screen font-sans relative overflow-x-hidden">
+
+  <!-- Decorative Background SVG -->
   <svg class="absolute left-0 top-0 opacity-10 pointer-events-none z-0" width="700" height="220">
     <circle cx="150" cy="110" r="110" fill="#22477A"/>
     <ellipse cx="500" cy="50" rx="70" ry="40" fill="#2d7be5"/>
@@ -16,6 +19,7 @@
     <ellipse cx="550" cy="170" rx="90" ry="60" fill="#2d7be5"/>
     <ellipse cx="400" cy="100" rx="60" ry="40" fill="#22477A"/>
   </svg>
+
   <!-- Header -->
   <header class="bg-gradient-to-r from-[#22477A] via-[#2d7be5] to-[#22477A] text-white flex justify-between items-center px-8 h-20 shadow-lg fixed w-full z-20">
     <div class="flex items-center gap-3">
@@ -29,58 +33,59 @@
       </button>
     </div>
   </header>
+
   <!-- Sidebar -->
-  <aside class="fixed top-20 left-0 h-full w-56 bg-[#E6F0FA]/90 text-[#22477A] shadow-md flex flex-col py-6 gap-2 z-10">
-    <a href="index.html" class="flex items-center gap-3 px-6 py-3 rounded-lg bg-white shadow font-bold">
+  <aside class="fixed top-20 left-0 h-full w-56 bg-white/80 text-[#22477A] shadow-lg flex flex-col py-6 gap-2 z-10 backdrop-blur-md">
+    <a href="index.html" class="flex items-center gap-3 px-6 py-3 rounded-lg bg-[#2d7be5]/20 font-bold transition">
       <i class="fa fa-home"></i> Accueil
     </a>
-    <a href="clients.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white hover:shadow">
+    <a href="clients.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/20 transition">
       <i class="fa fa-users"></i> Clients
     </a>
-    <a href="employes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white hover:shadow">
+    <a href="employes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/20 transition">
       <i class="fa fa-user-cog"></i> Employés
     </a>
-    <a href="commandes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white hover:shadow">
+    <a href="commandes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/20 transition">
       <i class="fa fa-tasks"></i> Commandes
     </a>
-    <a href="factures.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white hover:shadow">
+    <a href="factures.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/20 transition">
       <i class="fa fa-credit-card"></i> Factures
     </a>
-    <a href="statistiques.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white hover:shadow">
+    <a href="statistiques.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/20 transition">
       <i class="fa fa-chart-bar"></i> Statistiques
     </a>
-    <a href="parametres.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white hover:shadow">
+    <a href="parametres.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/20 transition">
       <i class="fa fa-cog"></i> Paramètres
     </a>
   </aside>
+
   <!-- Main Content -->
   <main class="ml-56 pt-28 px-8 min-h-screen relative z-10">
-    <!-- Welcome & Overview -->
-    <div class="mb-8 mt-2 animate-fadeIn">
+    <div class="mb-10 animate-fadeIn">
       <h1 class="text-4xl font-extrabold text-[#22477A] drop-shadow mb-2">Bienvenue, tarekben96 👋</h1>
       <div class="flex items-center gap-3">
-        <span class="text-lg text-[#2d7be5] font-semibold">Voici un aperçu de votre entreprise et accès rapide à chaque module.</span>
+        <span class="text-lg text-[#2d7be5] font-semibold">Accédez à la gestion de toute l'entreprise d’un seul endroit.</span>
         <span class="inline-block animate-bounce text-[#22477A] text-2xl">✨</span>
       </div>
     </div>
     <!-- Stat Cards -->
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
-      <div class="bg-white rounded-xl shadow flex flex-col items-center p-6 border-t-4 border-[#2d7be5]">
+      <div class="bg-white rounded-xl shadow flex flex-col items-center p-6 border-t-4 border-[#2d7be5] hover:scale-105 transition">
         <i class="fa fa-users fa-2x text-[#22477A] mb-2"></i>
         <div class="text-3xl font-bold text-[#22477A]">43</div>
         <div class="text-gray-600">Clients actifs</div>
       </div>
-      <div class="bg-white rounded-xl shadow flex flex-col items-center p-6 border-t-4 border-[#2d7be5]">
+      <div class="bg-white rounded-xl shadow flex flex-col items-center p-6 border-t-4 border-[#2d7be5] hover:scale-105 transition">
         <i class="fa fa-user-cog fa-2x text-[#22477A] mb-2"></i>
         <div class="text-3xl font-bold text-[#22477A]">8</div>
         <div class="text-gray-600">Employés</div>
       </div>
-      <div class="bg-white rounded-xl shadow flex flex-col items-center p-6 border-t-4 border-[#2d7be5]">
+      <div class="bg-white rounded-xl shadow flex flex-col items-center p-6 border-t-4 border-[#2d7be5] hover:scale-105 transition">
         <i class="fa fa-tasks fa-2x text-[#22477A] mb-2"></i>
         <div class="text-3xl font-bold text-[#22477A]">12</div>
         <div class="text-gray-600">Commandes en cours</div>
       </div>
-      <div class="bg-white rounded-xl shadow flex flex-col items-center p-6 border-t-4 border-[#2d7be5]">
+      <div class="bg-white rounded-xl shadow flex flex-col items-center p-6 border-t-4 border-[#2d7be5] hover:scale-105 transition">
         <i class="fa fa-credit-card fa-2x text-[#22477A] mb-2"></i>
         <div class="text-3xl font-bold text-[#22477A]">27</div>
         <div class="text-gray-600">Factures</div>
@@ -88,37 +93,38 @@
     </div>
     <!-- Quick Access Cards -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <a href="clients.html" class="group bg-white hover:bg-[#f0f7ff] transition rounded-2xl shadow-lg flex flex-col items-center p-8 text-[#22477A] hover:scale-105 hover:shadow-2xl duration-300 cursor-pointer border-2 border-transparent hover:border-[#2d7be5]">
+      <!-- Card Example: repeat for each section -->
+      <a href="clients.html" class="group bg-white hover:bg-[#2d7be5]/10 transition rounded-2xl shadow-lg flex flex-col items-center p-8 text-[#22477A] hover:scale-105 duration-300 cursor-pointer border-2 border-transparent hover:border-[#2d7be5]">
         <i class="fa fa-users fa-2x mb-3 group-hover:text-[#2d7be5] transition"></i>
         <span class="font-bold mb-1 text-lg">Clients</span>
         <span class="text-gray-600 text-sm text-center">Gérez vos clients, consultez leurs commandes et infos.</span>
         <span class="mt-3 text-xs text-[#2d7be5] font-semibold group-hover:underline transition">Accéder <i class="fa fa-arrow-right"></i></span>
       </a>
-      <a href="employes.html" class="group bg-white hover:bg-[#f0f7ff] transition rounded-2xl shadow-lg flex flex-col items-center p-8 text-[#22477A] hover:scale-105 hover:shadow-2xl duration-300 cursor-pointer border-2 border-transparent hover:border-[#2d7be5]">
+      <a href="employes.html" class="group bg-white hover:bg-[#2d7be5]/10 transition rounded-2xl shadow-lg flex flex-col items-center p-8 text-[#22477A] hover:scale-105 duration-300 cursor-pointer border-2 border-transparent hover:border-[#2d7be5]">
         <i class="fa fa-user-cog fa-2x mb-3 group-hover:text-[#2d7be5] transition"></i>
         <span class="font-bold mb-1 text-lg">Employés</span>
         <span class="text-gray-600 text-sm text-center">Voir, ajouter ou modifier les membres de l’équipe.</span>
         <span class="mt-3 text-xs text-[#2d7be5] font-semibold group-hover:underline transition">Accéder <i class="fa fa-arrow-right"></i></span>
       </a>
-      <a href="commandes.html" class="group bg-white hover:bg-[#f0f7ff] transition rounded-2xl shadow-lg flex flex-col items-center p-8 text-[#22477A] hover:scale-105 hover:shadow-2xl duration-300 cursor-pointer border-2 border-transparent hover:border-[#2d7be5]">
+      <a href="commandes.html" class="group bg-white hover:bg-[#2d7be5]/10 transition rounded-2xl shadow-lg flex flex-col items-center p-8 text-[#22477A] hover:scale-105 duration-300 cursor-pointer border-2 border-transparent hover:border-[#2d7be5]">
         <i class="fa fa-tasks fa-2x mb-3 group-hover:text-[#2d7be5] transition"></i>
         <span class="font-bold mb-1 text-lg">Commandes</span>
         <span class="text-gray-600 text-sm text-center">Suivez et gérez toutes les commandes des clients.</span>
         <span class="mt-3 text-xs text-[#2d7be5] font-semibold group-hover:underline transition">Accéder <i class="fa fa-arrow-right"></i></span>
       </a>
-      <a href="factures.html" class="group bg-white hover:bg-[#f0f7ff] transition rounded-2xl shadow-lg flex flex-col items-center p-8 text-[#22477A] hover:scale-105 hover:shadow-2xl duration-300 cursor-pointer border-2 border-transparent hover:border-[#2d7be5]">
+      <a href="factures.html" class="group bg-white hover:bg-[#2d7be5]/10 transition rounded-2xl shadow-lg flex flex-col items-center p-8 text-[#22477A] hover:scale-105 duration-300 cursor-pointer border-2 border-transparent hover:border-[#2d7be5]">
         <i class="fa fa-credit-card fa-2x mb-3 group-hover:text-[#2d7be5] transition"></i>
         <span class="font-bold mb-1 text-lg">Factures</span>
         <span class="text-gray-600 text-sm text-center">Consultez, ajoutez ou gérez les factures.</span>
         <span class="mt-3 text-xs text-[#2d7be5] font-semibold group-hover:underline transition">Accéder <i class="fa fa-arrow-right"></i></span>
       </a>
-      <a href="statistiques.html" class="group bg-white hover:bg-[#f0f7ff] transition rounded-2xl shadow-lg flex flex-col items-center p-8 text-[#22477A] hover:scale-105 hover:shadow-2xl duration-300 cursor-pointer border-2 border-transparent hover:border-[#2d7be5]">
+      <a href="statistiques.html" class="group bg-white hover:bg-[#2d7be5]/10 transition rounded-2xl shadow-lg flex flex-col items-center p-8 text-[#22477A] hover:scale-105 duration-300 cursor-pointer border-2 border-transparent hover:border-[#2d7be5]">
         <i class="fa fa-chart-bar fa-2x mb-3 group-hover:text-[#2d7be5] transition"></i>
         <span class="font-bold mb-1 text-lg">Statistiques</span>
         <span class="text-gray-600 text-sm text-center">Graphiques et statistiques sur vos activités.</span>
         <span class="mt-3 text-xs text-[#2d7be5] font-semibold group-hover:underline transition">Accéder <i class="fa fa-arrow-right"></i></span>
       </a>
-      <a href="parametres.html" class="group bg-white hover:bg-[#f0f7ff] transition rounded-2xl shadow-lg flex flex-col items-center p-8 text-[#22477A] hover:scale-105 hover:shadow-2xl duration-300 cursor-pointer border-2 border-transparent hover:border-[#2d7be5]">
+      <a href="parametres.html" class="group bg-white hover:bg-[#2d7be5]/10 transition rounded-2xl shadow-lg flex flex-col items-center p-8 text-[#22477A] hover:scale-105 duration-300 cursor-pointer border-2 border-transparent hover:border-[#2d7be5]">
         <i class="fa fa-cog fa-2x mb-3 group-hover:text-[#2d7be5] transition"></i>
         <span class="font-bold mb-1 text-lg">Paramètres</span>
         <span class="text-gray-600 text-sm text-center">Modifier vos informations et préférences.</span>
@@ -140,14 +146,11 @@
     }
     document.getElementById('greeting').textContent = getGreeting();
 
-    // Fake logout
     function logout() {
       alert("Déconnexion effectuée ! (démo)");
-      // Place your real logout logic here if needed
     }
   </script>
   <style>
-    /* Fade in animation for main content */
     .animate-fadeIn { animation: fadeIn 1.2s; }
     @keyframes fadeIn { 0%{opacity:0;transform:translateY(20px);} 100%{opacity:1;transform:translateY(0);} }
   </style>
