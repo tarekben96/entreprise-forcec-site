@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="images/logo.png">
 </head>
-<body class="bg-gradient-to-br from-[#22477A] via-[#2d7be5] to-[#F8F9FB] min-h-screen font-sans relative overflow-x-hidden">
+<body class="bg-[#F8F9FB] min-h-screen font-sans relative overflow-x-hidden">
 
   <!-- Decorative SVG Background -->
   <svg class="absolute left-0 top-0 opacity-10 pointer-events-none z-0" width="700" height="220">
@@ -35,32 +35,33 @@
   </header>
 
   <!-- Sidebar -->
-  <aside class="fixed top-20 left-0 h-full w-56 bg-white/80 text-[#22477A] shadow-lg flex flex-col py-6 gap-2 z-10 backdrop-blur-md">
+  <aside class="fixed top-20 left-0 h-full w-56 bg-white/90 text-[#22477A] shadow-lg flex flex-col py-6 gap-2 z-10 backdrop-blur-md">
     <a href="dashboard.html" class="flex items-center gap-3 px-6 py-3 rounded-lg bg-[#2d7be5]/20 font-bold transition">
       <i class="fa fa-home"></i> Accueil
     </a>
-    <a href="clients.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/20 transition">
+    <a href="clients.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/10 transition">
       <i class="fa fa-users"></i> Clients
     </a>
-    <a href="employes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/20 transition">
+    <a href="employes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/10 transition">
       <i class="fa fa-user-cog"></i> Employés
     </a>
-    <a href="commandes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/20 transition">
+    <a href="commandes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/10 transition">
       <i class="fa fa-tasks"></i> Commandes
     </a>
-    <a href="factures.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/20 transition">
+    <a href="factures.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/10 transition">
       <i class="fa fa-credit-card"></i> Factures
     </a>
-    <a href="statistiques.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/20 transition">
+    <a href="statistiques.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/10 transition">
       <i class="fa fa-chart-bar"></i> Statistiques
     </a>
-    <a href="parametres.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/20 transition">
+    <a href="parametres.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-[#2d7be5]/10 transition">
       <i class="fa fa-cog"></i> Paramètres
     </a>
   </aside>
 
   <!-- Main Content -->
   <main class="ml-56 pt-28 px-8 min-h-screen relative z-10">
+    <!-- Welcome & Overview -->
     <div class="mb-10 animate-fadeIn">
       <h1 class="text-4xl font-extrabold text-[#22477A] drop-shadow mb-2">Bienvenue, tarekben96 👋</h1>
       <div class="flex items-center gap-3">
@@ -70,23 +71,23 @@
     </div>
     <!-- Stat Cards -->
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
-      <div class="bg-white rounded-xl shadow flex flex-col items-center p-6 border-t-4 border-[#2d7be5] hover:scale-105 transition">
-        <i class="fa fa-users fa-2x text-[#22477A] mb-2"></i>
+      <div class="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 border-t-4 border-[#2d7be5] hover:scale-105 transition group">
+        <i class="fa fa-users fa-2x text-[#22477A] mb-2 group-hover:text-[#2d7be5] transition"></i>
         <div class="text-3xl font-bold text-[#22477A]">43</div>
         <div class="text-gray-600">Clients actifs</div>
       </div>
-      <div class="bg-white rounded-xl shadow flex flex-col items-center p-6 border-t-4 border-[#2d7be5] hover:scale-105 transition">
-        <i class="fa fa-user-cog fa-2x text-[#22477A] mb-2"></i>
+      <div class="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 border-t-4 border-[#2d7be5] hover:scale-105 transition group">
+        <i class="fa fa-user-cog fa-2x text-[#22477A] mb-2 group-hover:text-[#2d7be5] transition"></i>
         <div class="text-3xl font-bold text-[#22477A]">8</div>
         <div class="text-gray-600">Employés</div>
       </div>
-      <div class="bg-white rounded-xl shadow flex flex-col items-center p-6 border-t-4 border-[#2d7be5] hover:scale-105 transition">
-        <i class="fa fa-tasks fa-2x text-[#22477A] mb-2"></i>
+      <div class="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 border-t-4 border-[#2d7be5] hover:scale-105 transition group">
+        <i class="fa fa-tasks fa-2x text-[#22477A] mb-2 group-hover:text-[#2d7be5] transition"></i>
         <div class="text-3xl font-bold text-[#22477A]">12</div>
         <div class="text-gray-600">Commandes en cours</div>
       </div>
-      <div class="bg-white rounded-xl shadow flex flex-col items-center p-6 border-t-4 border-[#2d7be5] hover:scale-105 transition">
-        <i class="fa fa-credit-card fa-2x text-[#22477A] mb-2"></i>
+      <div class="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 border-t-4 border-[#2d7be5] hover:scale-105 transition group">
+        <i class="fa fa-credit-card fa-2x text-[#22477A] mb-2 group-hover:text-[#2d7be5] transition"></i>
         <div class="text-3xl font-bold text-[#22477A]">27</div>
         <div class="text-gray-600">Factures</div>
       </div>
