@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <title>Employés | Force C Inc.</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="../styles.css">
+  <link rel=".css">
   <link rel="icon" href="../images/logo.png">
 </head>
 <body class="bg-[#F8F9FB] font-sans min-h-screen">
@@ -31,6 +30,9 @@
   <!-- Sidebar -->
   <aside class="fixed top-16 left-0 h-full w-56 bg-[#E6F0FA] text-[#22477A] shadow-md flex flex-col py-6 gap-2 z-10">
     <a href="index.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+      <i class="fa fa-home"></i> Accueil
+    </a>
+    <a href="clients.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
       <i class="fa fa-users"></i> Clients
     </a>
     <a href="employes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg bg-white shadow font-bold">
@@ -123,13 +125,27 @@
       </form>
     </div>
   </div>
-  <script src="../main.js"></script>
   <script>
-    function openModal() { document.getElementById('modalTitle').textContent = 'Ajouter un employé'; document.getElementById('modal').classList.remove('hidden'); }
-    function closeModal() { document.getElementById('modal').classList.add('hidden'); }
-    function editEmployee(id) { document.getElementById('modalTitle').textContent = 'Modifier un employé'; document.getElementById('modal').classList.remove('hidden'); }
-    function deleteEmployee(id) { if (confirm("Voulez-vous vraiment supprimer cet employé ?")) alert("Employé supprimé (démo)"); }
-    document.add const form = document.getElementById('addEmployeeForm');
+    // Modal functions
+    function openModal() {
+      document.getElementById('modalTitle').textContent = 'Ajouter un employé';
+      document.getElementById('modal').classList.remove('hidden');
+    }
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+    }
+    function editEmployee(id) {
+      document.getElementById('modalTitle').textContent = 'Modifier un employé';
+      document.getElementById('modal').classList.remove('hidden');
+    }
+    function deleteEmployee(id) {
+      if (confirm("Voulez-vous vraiment supprimer cet employé ?")) {
+        alert("Employé supprimé (démo)");
+      }
+    }
+    // Form submit
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('addEmployeeForm');
       if (form) {
         form.addEventListener('submit', function (e) {
           e.preventDefault();
