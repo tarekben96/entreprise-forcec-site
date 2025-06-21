@@ -1,12 +1,96 @@
-/* styles.css */
-/* Main site colors and fonts are inherited from landing page styles */
+/* styles.css (dashboard-clients) */
+
 body {
-  /* Use the main font and background color from the home page */
   font-family: 'Cairo', sans-serif;
   background-color: #F8F9FB;
 }
-/* Example: keep same card and button styles as landing page */
-.btn-primary {
-  @apply bg-[#22477A] text-white rounded-lg shadow hover:bg-[#18315b];
+
+/* كارت إحصائي موحد للداشبورد */
+.stat-card {
+  min-height: 170px;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.22s, box-shadow 0.22s;
+  box-shadow: 0 8px 24px -6px rgba(34,71,122,.06);
+  border-radius: 1rem;
+  background: #fff;
 }
-/* ... (rest of your landing page custom styles) ... */
+
+.stat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 32px -8px rgba(34,71,122,.14);
+}
+
+@media (max-width: 640px) {
+  .stat-card {
+    min-height: 140px;
+    max-width: 100%;
+    padding: 1.5rem 0.75rem;
+  }
+}
+
+/* تأثير دائري حول الأيقونة */
+.stat-icon {
+  background: rgba(34,199,94,0.09);
+  padding: 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+/* زر أساسي موحد */
+.btn-primary {
+  background: #22477A;
+  color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px -2px #18315b33;
+  transition: background 0.15s;
+  padding: 0.6em 1.2em;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #18315b;
+}
+
+/* شبكة الكروت */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .stats-grid { grid-template-columns: repeat(3, 1fr);}
+}
+@media (min-width: 1024px) {
+  .stats-grid { grid-template-columns: repeat(4, 1fr);}
+}
+
+/* لمسات إضافية */
+.stat-label {
+  font-weight: bold;
+  color: #22477A;
+  margin-bottom: 0.25em;
+}
+.stat-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #22477A;
+  margin-bottom: 0.2em;
+}
+.stat-info {
+  font-size: 0.85rem;
+  color: #22c55e;
+  background: #e7faed;
+  border-radius: 9999px;
+  padding: 0.18em 0.85em;
+  margin-top: 0.6em;
+  font-weight: 600;
+  display: inline-block;
+}
