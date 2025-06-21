@@ -1,143 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Dashboard | Force C Inc.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-  <!-- Favicon -->
-  <link rel="icon" href="images/logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="images/logo.png">
 </head>
-<body class="bg-[#F8F9FB] font-sans">
-
-  <!-- HEADER -->
-  <header class="bg-[#22477A] text-white flex justify-between items-center px-6 h-20 fixed w-full z-20 shadow-md">
+<body class="bg-[#F8F9FB] font-sans min-h-screen">
+  <!-- Header -->
+  <header class="bg-[#22477A] text-white flex justify-between items-center px-8 h-16 shadow-md fixed w-full z-20">
     <div class="flex items-center gap-3">
-      <img src="images/logo.png" alt="Logo" class="h-10" />
-      <span class="font-bold text-2xl">Force C Inc.</span>
+      <img src="images/logo.png" class="h-8" alt="Force C Logo">
+      <span class="font-bold text-xl">Force C Inc.</span>
     </div>
-    <div class="flex items-center gap-4">
-      <span class="hidden sm:block font-semibold text-lg">Bon après-midi, tarekben96 👋</span>
-      <button class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-lg font-bold shadow flex items-center gap-2">
-        <i class="fa fa-sign-out-alt"></i> Déconnexion
+    <div class="flex items-center gap-8">
+      <span class="text-lg">Tableau de bord</span>
+      <button class="relative">
+        <i class="fa fa-bell"></i>
+        <span class="absolute -top-2 -right-2 bg-red-500 text-xs rounded-full w-5 h-5 flex items-center justify-center">1</span>
       </button>
+      <div class="flex items-center gap-2 cursor-pointer">
+        <img src="images/user.jpg" class="h-8 w-8 rounded-full" alt="Utilisateur">
+        <span>tarekben96</span>
+        <i class="fa fa-chevron-down"></i>
+      </div>
     </div>
   </header>
-
-  <!-- SIDEBAR -->
-  <div class="hidden md:flex space-x-6">
-  <!--  <aside class="fixed top-20 left-0 w-56 h-full bg-white shadow-md flex flex-col gap-2 py-4 z-10">
-    <a href="index.html" class="px-6 py-3 font-bold flex items-center gap-2 bg-green-100 text-[#22477A] rounded-md">-->
+  <!-- Sidebar -->
+  <aside class="fixed top-16 left-0 h-full w-56 bg-[#E6F0FA] text-[#22477A] shadow-md flex flex-col py-6 gap-2 z-10">
+    <a href="index.html" class="flex items-center gap-3 px-6 py-3 rounded-lg bg-white shadow font-bold">
       <i class="fa fa-home"></i> Accueil
     </a>
-    <a href="clients.html" class="px-6 py-3 flex items-center gap-2 hover:bg-green-50 rounded-md">
+    <a href="clients.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
       <i class="fa fa-users"></i> Clients
     </a>
-    <a href="employes.html" class="px-6 py-3 flex items-center gap-2 hover:bg-green-50 rounded-md">
+    <a href="employes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
       <i class="fa fa-user-cog"></i> Employés
     </a>
-    <a href="commandes.html" class="px-6 py-3 flex items-center gap-2 hover:bg-green-50 rounded-md">
+    <a href="commandes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
       <i class="fa fa-tasks"></i> Commandes
     </a>
-    <a href="factures.html" class="px-6 py-3 flex items-center gap-2 hover:bg-green-50 rounded-md">
+    <a href="factures.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
       <i class="fa fa-credit-card"></i> Factures
     </a>
-    <a href="statistiques.html" class="px-6 py-3 flex items-center gap-2 hover:bg-green-50 rounded-md">
+    <a href="statistiques.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
       <i class="fa fa-chart-bar"></i> Statistiques
     </a>
-    <a href="parametres.html" class="px-6 py-3 flex items-center gap-2 hover:bg-green-50 rounded-md">
+    <a href="parametres.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
       <i class="fa fa-cog"></i> Paramètres
     </a>
-  </div>
-    <!--</aside>-->
+  </aside>
+  <!-- Main Content -->
+  <main class="ml-56 pt-20 px-8 min-h-screen">
+    <h1 class="text-3xl font-bold text-[#22477A] mb-2">Bienvenue sur votre tableau de bord</h1>
+    <p class="mb-8 text-gray-700">Accédez rapidement à la gestion de votre entreprise : clients, employés, commandes, factures, statistiques et paramètres.</p>
 
-  <!-- MAIN -->
-  <main class="ml-56 pt-28 px-6 min-h-screen">
-    <h1 class="text-3xl font-extrabold text-[#22477A] mb-2 flex items-center gap-2">
-      Bienvenue, tarekben96 <span class="text-green-500 animate-bounce">👋</span>
-    </h1>
-    <p class="text-blue-500 font-semibold mb-8">Votre tableau de bord Force C Inc.</p>
-
-    <!-- STATS -->
-    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-      <div class="bg-white p-6 rounded-xl shadow border-t-4 border-green-500 text-center">
-        <div class="bg-green-100 p-4 rounded-full mb-3 inline-block">
-          <i class="fa fa-users text-green-600 text-xl"></i>
-        </div>
-        <div class="text-3xl font-bold text-[#22477A]">43</div>
-        <div class="text-sm text-gray-600">Clients actifs</div>
-        <div class="text-xs text-green-600 mt-1">+5 cette semaine</div>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow border-t-4 border-blue-500 text-center">
-        <div class="bg-blue-100 p-4 rounded-full mb-3 inline-block">
-          <i class="fa fa-user-cog text-blue-600 text-xl"></i>
-        </div>
-        <div class="text-3xl font-bold text-[#22477A]">8</div>
-        <div class="text-sm text-gray-600">Employés</div>
-        <div class="text-xs text-blue-600 mt-1">Stable</div>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow border-t-4 border-[#22477A] text-center">
-        <div class="bg-blue-50 p-4 rounded-full mb-3 inline-block">
-          <i class="fa fa-tasks text-[#22477A] text-xl"></i>
-        </div>
-        <div class="text-3xl font-bold text-[#22477A]">12</div>
-        <div class="text-sm text-gray-600">Commandes en cours</div>
-        <div class="text-xs text-[#22477A] mt-1">2 urgentes</div>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow border-t-4 border-green-500 text-center">
-        <div class="bg-green-100 p-4 rounded-full mb-3 inline-block">
-          <i class="fa fa-credit-card text-green-600 text-xl"></i>
-        </div>
-        <div class="text-3xl font-bold text-[#22477A]">27</div>
-        <div class="text-sm text-gray-600">Factures</div>
-        <div class="text-xs text-green-600 mt-1">3 impayées</div>
-      </div>
-    </div>
-
-    <!-- LIENS RAPIDES -->
-    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <a href="clients.html" class="bg-white p-6 rounded-xl shadow hover:border-green-500 border-2 border-transparent text-center">
-        <i class="fa fa-users text-2xl mb-2 text-green-500"></i>
-        <h3 class="font-bold text-lg">Clients</h3>
-        <p class="text-sm text-gray-600">Gérez vos clients, consultez leurs commandes et infos.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Clients -->
+      <a href="clients.html" class="bg-white hover:bg-[#f0f7ff] transition rounded-lg shadow flex flex-col items-center p-8 text-[#22477A]">
+        <i class="fa fa-users fa-2x mb-3"></i>
+        <span class="font-bold mb-1 text-lg">Clients</span>
+        <span class="text-gray-600 text-sm">Gérer vos clients, consulter leurs commandes et infos.</span>
       </a>
-      <a href="employes.html" class="bg-white p-6 rounded-xl shadow hover:border-blue-500 border-2 border-transparent text-center">
-        <i class="fa fa-user-cog text-2xl mb-2 text-blue-500"></i>
-        <h3 class="font-bold text-lg">Employés</h3>
-        <p class="text-sm text-gray-600">Voir, ajouter ou modifier les membres de l’équipe.</p>
+      <!-- Employés -->
+      <a href="employes.html" class="bg-white hover:bg-[#f0f7ff] transition rounded-lg shadow flex flex-col items-center p-8 text-[#22477A]">
+        <i class="fa fa-user-cog fa-2x mb-3"></i>
+        <span class="font-bold mb-1 text-lg">Employés</span>
+        <span class="text-gray-600 text-sm">Voir, ajouter ou modifier les employés de l’entreprise.</span>
       </a>
-      <a href="commandes.html" class="bg-white p-6 rounded-xl shadow hover:border-[#22477A] border-2 border-transparent text-center">
-        <i class="fa fa-tasks text-2xl mb-2 text-[#22477A]"></i>
-        <h3 class="font-bold text-lg">Commandes</h3>
-        <p class="text-sm text-gray-600">Suivre et gérer toutes les commandes des clients.</p>
+      <!-- Commandes -->
+      <a href="commandes.html" class="bg-white hover:bg-[#f0f7ff] transition rounded-lg shadow flex flex-col items-center p-8 text-[#22477A]">
+        <i class="fa fa-tasks fa-2x mb-3"></i>
+        <span class="font-bold mb-1 text-lg">Commandes</span>
+        <span class="text-gray-600 text-sm">Suivre et gérer toutes les commandes des clients.</span>
       </a>
-      <a href="factures.html" class="bg-white p-6 rounded-xl shadow hover:border-green-500 border-2 border-transparent text-center">
-        <i class="fa fa-credit-card text-2xl mb-2 text-green-500"></i>
-        <h3 class="font-bold text-lg">Factures</h3>
-        <p class="text-sm text-gray-600">Consulter, ajouter ou gérer les factures.</p>
+      <!-- Factures -->
+      <a href="factures.html" class="bg-white hover:bg-[#f0f7ff] transition rounded-lg shadow flex flex-col items-center p-8 text-[#22477A]">
+        <i class="fa fa-credit-card fa-2x mb-3"></i>
+        <span class="font-bold mb-1 text-lg">Factures</span>
+        <span class="text-gray-600 text-sm">Consulter, ajouter ou gérer les factures.</span>
       </a>
-      <a href="statistiques.html" class="bg-white p-6 rounded-xl shadow hover:border-blue-500 border-2 border-transparent text-center">
-        <i class="fa fa-chart-bar text-2xl mb-2 text-blue-500"></i>
-        <h3 class="font-bold text-lg">Statistiques</h3>
-        <p class="text-sm text-gray-600">Graphiques et statistiques sur vos activités.</p>
+      <!-- Statistiques -->
+      <a href="statistiques.html" class="bg-white hover:bg-[#f0f7ff] transition rounded-lg shadow flex flex-col items-center p-8 text-[#22477A]">
+        <i class="fa fa-chart-bar fa-2x mb-3"></i>
+        <span class="font-bold mb-1 text-lg">Statistiques</span>
+        <span class="text-gray-600 text-sm">Voir des graphiques et des statistiques sur vos activités.</span>
       </a>
-      <a href="parametres.html" class="bg-white p-6 rounded-xl shadow hover:border-[#22477A] border-2 border-transparent text-center">
-        <i class="fa fa-cog text-2xl mb-2 text-[#22477A]"></i>
-        <h3 class="font-bold text-lg">Paramètres</h3>
-        <p class="text-sm text-gray-600">Modifier vos informations et préférences.</p>
+      <!-- Paramètres -->
+      <a href="parametres.html" class="bg-white hover:bg-[#f0f7ff] transition rounded-lg shadow flex flex-col items-center p-8 text-[#22477A]">
+        <i class="fa fa-cog fa-2x mb-3"></i>
+        <span class="font-bold mb-1 text-lg">Paramètres</span>
+        <span class="text-gray-600 text-sm">Modifier vos informations ou préférences.</span>
       </a>
     </div>
-
-    <!-- FOOTER -->
-    <footer class="text-center text-gray-400 text-sm mt-12 mb-4">
-      &copy; 2025 Force C Inc. – Dashboard propulsé par <span class="font-semibold text-[#22477A]">tarekben96</span>
-    </footer>
   </main>
 </body>
 </html>
