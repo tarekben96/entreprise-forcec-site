@@ -1,1 +1,146 @@
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Factures | Force C Inc.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../images/logo.png">
+</head>
+<body class="bg-[#F8F9FB] font-sans min-h-screen">
+  <!-- Header -->
+  <header class="bg-[#22477A] text-white flex justify-between items-center px-8 h-16 shadow-md fixed w-full z-20">
+    <div class="flex items-center gap-3">
+      <img src="../images/logo.png" class="h-8" alt="Force C Logo">
+      <span class="font-bold text-xl">Force C Inc.</span>
+    </div>
+    <div class="flex items-center gap-8">
+      <span class="text-lg">Tableau de bord</span>
+      <button class="relative">
+        <i class="fa fa-bell"></i>
+        <span class="absolute -top-2 -right-2 bg-red-500 text-xs rounded-full w-5 h-5 flex items-center justify-center">5</span>
+      </button>
+      <div class="flex items-center gap-2 cursor-pointer">
+        <img src="../images/user.jpg" class="h-8 w-8 rounded-full" alt="Utilisateur">
+        <span>tarekben96</span>
+        <i class="fa fa-chevron-down"></i>
+      </div>
+    </div>
+  </header>
+  <!-- Sidebar -->
+  <aside class="fixed top-16 left-0 h-full w-56 bg-[#E6F0FA] text-[#22477A] shadow-md flex flex-col py-6 gap-2 z-10">
+    <a href="index.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+      <i class="fa fa-users"></i> Clients
+    </a>
+    <a href="employes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+      <i class="fa fa-user-cog"></i> Employés
+    </a>
+    <a href="commandes.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+      <i class="fa fa-tasks"></i> Commandes
+    </a>
+    <a href="factures.html" class="flex items-center gap-3 px-6 py-3 rounded-lg bg-white shadow font-bold">
+      <i class="fa fa-credit-card"></i> Factures
+    </a>
+    <a href="statistiques.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+      <i class="fa fa-chart-bar"></i> Statistiques
+    </a>
+    <a href="parametres.html" class="flex items-center gap-3 px-6 py-3 rounded-lg hover:bg-white">
+      <i class="fa fa-cog"></i> Paramètres
+    </a>
+  </aside>
+  <!-- Main Content -->
+  <main class="ml-56 pt-20 px-6 min-h-screen">
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-2xl font-bold text-[#22477A]">Gestion des factures</h1>
+      <button onclick="openModal()" class="bg-[#22477A] text-white px-5 py-2 rounded-lg flex items-center gap-2 shadow hover:bg-[#18315b]">
+        <i class="fa fa-plus"></i> Nouvelle facture
+      </button>
+    </div>
+    <div class="flex flex-wrap gap-4 mb-4">
+      <input class="border rounded-lg px-4 py-2 w-full md:w-1/3" placeholder="Recherche par client ou statut...">
+      <select class="border rounded-lg px-4 py-2 w-full md:w-1/6">
+        <option>Tous les statuts</option>
+        <option>Payée</option>
+        <option>Impayée</option>
+        <option>En retard</option>
+      </select>
+    </div>
+    <div class="bg-white rounded-lg shadow-md overflow-x-auto">
+      <table class="w-full">
+        <thead>
+          <tr class="bg-[#E6F0FA] text-[#22477A]">
+            <th class="py-3 px-2">#</th>
+            <th class="py-3 px-2">Client</th>
+            <th class="py-3 px-2">Date</th>
+            <th class="py-3 px-2">Montant</th>
+            <th class="py-3 px-2">Statut</th>
+            <th class="py-3 px-2">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hover:bg-[#F8F9FB]">
+            <td class="py-2 px-2">1</td>
+            <td class="py-2 px-2">Ali Ben Youssef</td>
+            <td class="py-2 px-2">2025-06-20</td>
+            <td class="py-2 px-2">120 $</td>
+            <td class="py-2 px-2">
+              <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Payée</span>
+            </td>
+            <td class="py-2 px-2 flex gap-2 justify-center">
+              <button class="text-[#22477A] hover:underline mx-1" title="Voir"><i class="fa fa-eye"></i></button>
+              <button class="text-[#22477A] hover:underline mx-1" title="Modifier" onclick="editInvoice(1)"><i class="fa fa-edit"></i></button>
+              <button class="text-red-600 hover:underline mx-1" title="Supprimer" onclick="deleteInvoice(1)"><i class="fa fa-trash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <!-- Modal Add/Edit Invoice -->
+  <div id="modal" class="fixed inset-0 z-50 bg-black bg-opacity-40 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-md relative">
+      <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-red-600 text-xl">
+        <i class="fa fa-times"></i>
+      </button>
+      <h2 id="modalTitle" class="text-xl font-bold text-[#22477A] mb-4">Nouvelle facture</h2>
+      <form id="addInvoiceForm" autocomplete="off">
+        <div class="mb-3">
+          <label class="block text-sm font-medium">Client :</label>
+          <input type="text" class="border rounded-lg px-3 py-2 w-full mt-1" required>
+        </div>
+        <div class="mb-3">
+          <label class="block text-sm font-medium">Date :</label>
+          <input type="date" class="border rounded-lg px-3 py-2 w-full mt-1" required>
+        </div>
+        <div class="mb-3">
+          <label class="block text-sm font-medium">Montant :</label>
+          <input type="number" class="border rounded-lg px-3 py-2 w-full mt-1" required>
+        </div>
+        <="mt-6 flex gap-3">
+          <button type="submit" class="bg-[#22477A] text-white px-4 py-2 rounded-lg font-bold">Enregistrer</button>
+          <button type="button" onclick="closeModal()" class="bg-gray-200 px-4 py-2 rounded-lg">Annuler</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="../main.js"></script>
+  <script>
+    function openModal() { document.getElementById('modalTitle').textContent = 'Nouvelle facture'; document.getElementById('modal').classList.remove('hidden'); }
+    function closeModal() { document.getElementById('modal').classList.add('hidden'); }
+    function editInvoice(id) { document.getElementById('modalTitle').textContent = 'Modifier la facture'; document.getElementById('modal').classList.remove('hidden'); }
+    function deleteInvoice(id) { if (confirm("Voulez-vous vraiment supprimer cette facture ?")) alert("Facture supprimée (démo)"); }
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('addInvoiceForm');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          alert('Facture ajoutée (démo)');
+          closeModal();
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
